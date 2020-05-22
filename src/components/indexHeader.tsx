@@ -25,7 +25,6 @@ const IndexHeader = ()=> {
       <Grid container style={{minHeight: '100vh', padding: '3em', color: theme.palette.secondary.light}} direction='column' justify='flex-start' alignItems='center' spacing={9} >
           <Grid item>
             <br/>
-
             <Link
                 to="/"
                 style={{
@@ -34,43 +33,42 @@ const IndexHeader = ()=> {
                 }}
               >
               <IndexLogo/>
-
             </Link>
-
+            <Typography variant='body1'>The future of housing management</Typography>
+            <Grid container direction='column' justify='space-around' alignItems='flex-start' spacing={3}>
+              <Grid item>
+              <hr/>
+              </Grid>
+              <Grid item >
+                <Link
+                  to="/platform"
+                  style={{
+                    color: theme.palette.secondary.light,
+                    textDecoration: `none`,
+                  }}
+                >
+                  <Button color='inherit' variant='outlined'>Platform</Button>
+                </Link>
+              </Grid>
+              <Grid item>
+                <Link
+                  to="/team"
+                  style={{
+                    color: theme.palette.secondary.light,
+                    textDecoration: `none`,
+                  }}
+                >
+                  <Button color='inherit' variant='outlined'>Team</Button>
+                </Link>
+              </Grid>
+              <hr/>
+            </Grid>
           </Grid>        
 
-          <Grid item container direction='column' justify='space-around' alignItems='center' spacing={3} >
-            <Grid item>
-              <Typography variant='body2'></Typography> 
-            </Grid>
-            <Grid item >
-              <Link
-                to="/platform"
-                style={{
-                  color: theme.palette.secondary.light,
-                  textDecoration: `none`,
-                }}
-              >
-                <Button color='inherit' variant='outlined'>Platform</Button>
-              </Link>
-            </Grid>
-            <Grid item>
-              <Link
-                to="/team"
-                style={{
-                  color: theme.palette.secondary.light,
-                  textDecoration: `none`,
-                }}
-              >
-                <Button color='inherit' variant='outlined'>Team</Button>
-              </Link>
-            </Grid>
-            <hr/>
-
-          </Grid>
+          
           <Grid item>
             <Hidden smDown>
-                <div  onClick={() => scrollTo('#index1')} style={{ cursor: 'grab', float: 'none', margin: '0 auto'}}>
+                <div  onClick={() => scrollTo('#index1')} style={{ cursor: 'grab', float: 'none', margin: '5em auto'}}>
                   <div
                     style={{
                       color: theme.palette.secondary.light,
@@ -89,13 +87,13 @@ const IndexHeader = ()=> {
         <Wave fill={theme.palette.secondary.light} paused={false}
             options={{
               height: 30,
-              amplitude: 30,
-              speed: 0.1,
-              points: 2
+              amplitude: 10,
+              speed: 0.25,
+              points: 4
             }}
             style={{
               cursor: 'grab',
-              marginTop: '-5em'
+              marginTop: '-7em'
             }}
             onClick={() => scrollTo('#index1')}
         ></Wave>

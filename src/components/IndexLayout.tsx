@@ -33,12 +33,12 @@ const IndexLayout = ({ children }) => {
       </div>
       <ScrollUpButton
         StopPosition={0}
-        ShowAtPosition={150}
+        ShowAtPosition={500}
         EasingType='easeOutCubic'
         ContainerClassName="AnyClassForContainer"
         TransitionClassName="AnyClassForTransition"
-        AnimationDuration={500}
-        style={{color: '#E86D48', background: 'none', cursor: 'default', textDecoration: 'none', marginTop: '5em'}}
+        AnimationDuration={200}
+        style={{color: '#E86D48', background: 'none', cursor: 'grab', textDecoration: 'none', marginTop: '5em'}}
       >
         <KeyboardArrowUpIcon style={{fontSize: '3em'}}/>
       </ScrollUpButton>

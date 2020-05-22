@@ -18,7 +18,7 @@ const Footer = () => {
         marginTop: '2em',
         padding: '1em 1em 1em 2em',
         borderRadius: '1em',
-        boxShadow: `200px 10px ${theme.palette.primary.main}`,
+        boxShadow: `150px 10px ${theme.palette.primary.main}`,
       }}>
         <Grid container justify='space-between' alignItems='center'>
           <Grid item xs={12} sm={7}>

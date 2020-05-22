@@ -12,6 +12,8 @@ import Header from "./header"
 import Footer from './footer'
 import "./layout.css"
 import theme from './theme'
+import ScrollUpButton from "react-scroll-up-button"; //Add this line Here
+import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 
 const Layout = ({ children }, page: any) => {
   const data = useStaticQuery(graphql`
@@ -26,6 +28,17 @@ const Layout = ({ children }, page: any) => {
    
   return (
     <div style={{background: '#CFEBEC'}}>
+      <ScrollUpButton
+        StopPosition={0}
+        ShowAtPosition={500}
+        EasingType='easeOutCubic'
+        ContainerClassName="AnyClassForContainer"
+        TransitionClassName="AnyClassForTransition"
+        AnimationDuration={200}
+        style={{color: '#E86D48', background: 'none', cursor: 'grab', textDecoration: 'none', marginTop: '5em'}}
+      >
+        <KeyboardArrowUpIcon style={{fontSize: '3em'}}/>
+      </ScrollUpButton>
       <Header page={page}/>
       <div
         style={{
