@@ -12,26 +12,29 @@ const Footer = () => {
   return (
     <ThemeProvider theme={theme}>
       <div style={{
-        minHeight: '10em', 
+        minHeight: '4em', 
         backgroundColor: theme.palette.secondary.main, 
         color: theme.palette.secondary.light,
-        padding: '3em',
-        boxShadow: `5px 10px ${theme.palette.primary.main}`,
+        marginTop: '2em',
+        padding: '1em 1em 1em 2em',
+        borderRadius: '1em',
+        boxShadow: `200px 10px ${theme.palette.primary.main}`,
       }}>
         <Grid container justify='space-between' alignItems='center'>
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={12} sm={7}>
             <Typography variant='body1'>
-              © {new Date().getFullYear()}, Lease on the Block, LLC
+              © {new Date().getFullYear()} Lease on the Block
             </Typography>
           </Grid>
-          <Grid item xs={12} sm={6}>
-            <IconButton style={{color: theme.palette.secondary.light}} href='https://twitter.com'>
+          Follow us!
+          <Grid item xs={12} sm={3}>
+            <IconButton style={{color: theme.palette.secondary.light}} href='https://twitter.com/LeaseOTB'>
               <TwitterIcon/>
             </IconButton>
             <IconButton style={{color: theme.palette.secondary.light}} href='https://github.com/zachdt'>
               <GitHubIcon/>
             </IconButton>
-            <IconButton style={{color: theme.palette.secondary.light}} href='https://twitter.com'>
+            <IconButton style={{color: theme.palette.secondary.light}} href='https://www.linkedin.com/company/43276219'>
               <LinkedInIcon/>
             </IconButton>
           </Grid>

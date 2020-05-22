@@ -1,6 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import PropTypes from 'prop-types';
 
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
@@ -13,10 +14,10 @@ import Img from "gatsby-image"
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-const IndexLogo = (props) => {
+const Redwan = () => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "header-logo.png" }) {
+      placeholderImage: file(relativePath: { eq: "redwan.png" }) {
         childImageSharp {
           fluid(maxWidth: 1200) {
             ...GatsbyImageSharpFluid
@@ -26,7 +27,11 @@ const IndexLogo = (props) => {
     }
   `)
 
-  return <Img style={{width: '40em', marginLeft: '0em'}} fluid={data.placeholderImage.childImageSharp.fluid} />
+  return (
+    <Img style={{width: '10em', marginLeft: '0em', borderRadius: '1em'}} fluid={data.placeholderImage.childImageSharp.fluid} />
+  )
 }
 
-export default IndexLogo
+
+
+export default Redwan

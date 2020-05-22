@@ -21,7 +21,9 @@
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-helmet": "^6.0.0"
+    "react-helmet": "^6.0.0",
+    "react-scroll-up-button": "^1.6.4",
+    "react-wavify": "^1.3.0"
   },
   "devDependencies": {
     "prettier": "2.0.5"

@@ -1,27 +1,21 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import HeaderLogo from './headerLogo'
-import IndexLogo from './indexLogo'
+import HeaderLogo from './images/headerLogo'
+import IndexLogo from './images/indexLogo'
 import scrollTo from 'gatsby-plugin-smoothscroll'
 
-import { Grid, Typography, ThemeProvider, IconButton } from '@material-ui/core';
+import { Grid, AppBar, Typography, Toolbar, ThemeProvider, IconButton, Button, Tab, Tabs, withStyles} from '@material-ui/core';
 import theme from './theme'
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward'
 
-const Header = (page: any) => {
+import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 
-  console.log(page)
-  if (page !== '/') {
-    return (
-      <header
-        style={{
-          background: '#E86D48',
-          minHeight: '100vh',
-        }}
-      >
-        <Grid container style={{minHeight: '100vh'}} direction='column' justify='space-around' alignItems='center'>
-          <Grid item>
+const Header = (page: any) => {
+  return (
+    <ThemeProvider theme={theme}>
+        <AppBar color='secondary' position='fixed'>
+          <Toolbar variant='dense'>
             <Link
               to="/"
               style={{
@@ -29,53 +23,49 @@ const Header = (page: any) => {
                 textDecoration: `none`,
               }}
             >
-              <IndexLogo/>
+              <HeaderLogo width='15em'/>
             </Link>
-          </Grid>
-          <Grid item>
-            <div
-              onClick={() => scrollTo('#index1')}
-              style={{
-                color: '#250A3C',
-                textDecoration: `none`,
-              }}
-            >
-              <ArrowDownwardIcon style={{fontSize: '6em'}} />
-            </div>
-          </Grid>
-        </Grid>
-      </header>
-    )
-  } else {
-    return (
-      <header
-      style={{
-        background: '#E86D48',
-        marginBottom: `1.45rem`,
-      }}
-       >
-        <div
-          style={{
-            margin: `0 auto`,
-            maxWidth: 960,
-            padding: `1.45rem 1.0875rem`,
-          }}
-        >
-          <h1 style={{ margin: 0 }}>
-          <Link
-            to="/"
-            style={{
-              color: `white`,
-              textDecoration: `none`,
-            }}
-          >
-            <HeaderLogo width='8em'/>
-          </Link>
-          </h1>
-        </div>
-      </header>
-    )
-  }
+            <Grid item container direction='row' justify='flex-end' alignItems='center' spacing={4} >
+              <Grid item>
+                <Link
+                  to="/platform"
+                  style={{
+                    color: theme.palette.secondary.light,
+                    textDecoration: `none`,
+                  }}
+                >
+                  <Button color='inherit' variant='text'>Platform</Button>
+                </Link>
+              </Grid>
+              <Grid item>
+                <Link
+                  to="/team"
+                  style={{
+                    color: theme.palette.secondary.light,
+                    textDecoration: `none`,
+                  }}
+                >
+                  <Button color='inherit' variant='text'>Team</Button>
+                </Link>
+              </Grid>
+              
+              <Grid item>
+                <Link
+                  to="/careers"
+                  style={{
+                    color: theme.palette.secondary.light,
+                    textDecoration: `none`,
+                  }}
+                >
+                  <Button color='primary' variant='outlined'>Join</Button>
+                </Link>
+              </Grid>
+              
+            </Grid>
+          </Toolbar>
+        </AppBar>
+    </ThemeProvider>
+  )
 }
 
 Header.propTypes = {

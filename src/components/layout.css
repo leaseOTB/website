@@ -621,3 +621,18 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+.AnyClassForContainer {
+  position: fixed;
+  right: -100px;
+  bottom: 150px;
+  transition: right 0.5s;
+  font-size: 20px;
+  padding: 10px;
+  text-decoration: none;
+  outline: none;
+}
+
+.AnyClassForTransition {
+  right: 20px;
+}
