@@ -624,7 +624,7 @@ pre tt:after {
 
 .AnyClassForContainer {
   position: fixed;
-  right: 10%;
+  right: 5%;
   top: -150px;
   transition: top 0.5s;
   font-size: 20px;
@@ -634,5 +634,21 @@ pre tt:after {
 }
 
 .AnyClassForTransition {
-  top: -100px;
+  top: -90px;
 }
+@keyframes down{
+  from {
+    y: 0px;
+  }
+  to {
+    y: 50px;
+  }
+}
+.downArrow {
+  animation-name: down;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease;
+}
+

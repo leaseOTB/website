@@ -3,6 +3,8 @@ import { Link, PageProps } from "gatsby"
 
 import Layout from "../components/layout"
 import IndexImage from "../components/images/indexImage"
+import IndexImage1 from '../components/images/indexImage1'
+
 import SEO from "../components/seo"
 import theme from '../components/theme'
 import {ThemeProvider, Grid, Typography, Button, Card} from '@material-ui/core'
@@ -13,21 +15,38 @@ const IndexPage = () => {
   return (
     <IndexLayout>
       <ThemeProvider theme={theme}>
-      <div style={{minHeight: '100vh'}}>
+      <div style={{minHeight: '70vh'}}>
         <SEO title="Home" />
-          <Grid id='index1' container justify='flex-start' alignItems='center'>
-            <Grid item xs={12} sm={6}>
-              <div style={{padding: '3em', color: theme.palette.secondary.main}}>
-                Blockchain Technology for NYC
-              </div>
-            </Grid>
-            <Grid item xs={12} sm={6}>
-              <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
+          <div style={{padding: '2em', marginBottom: '-3em'}} >
+          <Typography id='platform' variant='h3' color='secondary' style={{cursor: 'default'}}>What is Lease on the Block?</Typography>
+          <br/>
+
+            <Grid container direction='row' justify='center' alignItems='center' spacing={0} >
+              <Grid item xs={12} sm={6} >
+                <Typography variant='h6' color='secondary'>Lease on the Block is a governance product designed to preserve affordable housing apartments in New York City.</Typography>
+                <br/>
+                <br/>
+                <Typography variant='body1' color='secondary'>We use innovative technology to create collaboration between Tenants, Affordable Housing Agencies and the Real Estate industry.</Typography>  
+              </Grid>
+              <Grid item xs={12} sm={6}>
                 <IndexImage />
-              </div>
+              </Grid>
             </Grid>
-          </Grid>
-         
+            <br/>
+            <br/>
+
+            <br/>
+
+            <br/>
+            <Grid container direction='row' justify='center' alignItems='center'>
+              <Grid item xs={12} sm={6}>
+                <IndexImage1 />
+              </Grid>
+              <Grid item xs={12} sm={6} >
+                <Typography variant='body1' color='secondary'>Under the hood we use a decentralized private ledger that offers a one stop shop for saving, tracking and storing information about rent-stabilized apartments.</Typography>  
+              </Grid>
+            </Grid>
+          </div>
         </div>
       </ThemeProvider>
     </IndexLayout>

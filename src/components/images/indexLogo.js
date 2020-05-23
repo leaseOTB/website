@@ -26,7 +26,7 @@ const IndexLogo = (props) => {
     }
   `)
 
-  return <Img style={{width: '20em', marginLeft: '0em'}} fluid={data.placeholderImage.childImageSharp.fluid} />
+  return <Img style={{width: '20em', margin: 'auto 0'}} fluid={data.placeholderImage.childImageSharp.fluid} />
 }
 
 export default IndexLogo

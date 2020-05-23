@@ -45,13 +45,13 @@ const Team = (props: PageProps) => (
                 <Redwan/>
               </Grid>
               <Grid item xs={5} container direction='column'>
-                <IconButton href='https://twitter.com/RedoudouM' style={{color: theme.palette.secondary.light}} >
+                <IconButton target='__blank' href='https://twitter.com/RedoudouM' style={{color: theme.palette.secondary.light}} >
                   <TwitterIcon/>
                 </IconButton>
-                <IconButton href='https://github.com/Redoudou' style={{color: theme.palette.secondary.light}} >
+                <IconButton target='__blank' href='https://github.com/Redoudou' style={{color: theme.palette.secondary.light}} >
                   <GitHubIcon />
                 </IconButton>
-                <IconButton href='https://www.linkedin.com/in/redwanmeslem/' style={{color: theme.palette.secondary.light}} >
+                <IconButton target='__blank' href='https://www.linkedin.com/in/redwanmeslem/' style={{color: theme.palette.secondary.light}} >
                   <LinkedInIcon/>
                 </IconButton>
               </Grid>
@@ -76,13 +76,13 @@ const Team = (props: PageProps) => (
                 <Zach/>
               </Grid>
               <Grid item xs={5} container direction='column'>
-                <IconButton href='https://twitter.com/_zachdt' style={{color: theme.palette.secondary.light}} >
+                <IconButton target='__blank' href='https://twitter.com/_zachdt' style={{color: theme.palette.secondary.light}} >
                   <TwitterIcon/>
                 </IconButton>
-                <IconButton href='https://github.com/zachdt' style={{color: theme.palette.secondary.light}} >
+                <IconButton target='__blank' href='https://github.com/zachdt' style={{color: theme.palette.secondary.light}} >
                   <GitHubIcon />
                 </IconButton>
-                <IconButton href='https://www.linkedin.com/in/zacharydavisthielemann/' style={{color: theme.palette.secondary.light}} >
+                <IconButton target='__blank' href='https://www.linkedin.com/in/zacharydavisthielemann/' style={{color: theme.palette.secondary.light}} >
                   <LinkedInIcon/>
                 </IconButton>
               </Grid>

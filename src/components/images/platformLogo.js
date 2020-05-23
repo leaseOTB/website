@@ -26,7 +26,7 @@ const PlatformLogo = (props) => {
     }
   `)
 
-  return <Img style={{width: '15em', background: 'none'}} fluid={data.placeholderImage.childImageSharp.fluid} />
+  return <Img style={{width: '15em', background: 'none', marginLeft: '4em'}} fluid={data.placeholderImage.childImageSharp.fluid} />
 }
 
 export default PlatformLogo

@@ -5,7 +5,7 @@ import HeaderLogo from './images/headerLogo'
 import IndexLogo from './images/indexLogo'
 import scrollTo from 'gatsby-plugin-smoothscroll'
 import Wave from 'react-wavify'
-
+import "./layout.css"
 import { Grid, AppBar, Typography, Hidden, Toolbar, ThemeProvider, IconButton, Button, Divider} from '@material-ui/core';
 import theme from './theme'
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
@@ -21,60 +21,65 @@ const IndexHeader = () => {
           minHeight: '100vh',
         }}
       >
-      <Grid container style={{minHeight: '100vh', padding: '3em', color: theme.palette.secondary.light}} direction='column' justify='flex-start' alignItems='center' spacing={9} >
+      <Grid container style={{minHeight: '100vh', paddingTop: '10em', padding: '3em', color: theme.palette.secondary.light}} direction='column' justify='flex-start' alignItems='center' spacing={9} >
           <Grid item>
             <br/>
-            <Link
-                to="/"
-                style={{
-                  color: theme.palette.secondary.light,
-                  textDecoration: `none`,
-                }}
-              >
-              <IndexLogo/>
-            </Link>
-            
-            <Grid container direction='row' justify='flex-start' alignItems='flex-start'>
-              <Grid item xs={1}>
-              </Grid>
-              <Grid item xs={12}>
-                <Typography variant='body2'>BLOCKCHAIN LEASE MANAGEMENT</Typography>
 
-                <Grid container direction='column' justify='space-around' alignItems='flex-start' spacing={3}>
+            
+            <Grid container direction='row' justify='center' alignItems='flex-start'>
+              <Grid item sm={12} md={5}>
+                <Link
+                  to="/"
+                  style={{
+                    color: theme.palette.secondary.light,
+                    textDecoration: `none`,
+                  }}
+                >
+                <IndexLogo/>
+              </Link>
+              </Grid>
+                <Grid item sm={12} md={5} container direction='column-reverse' justify='center' alignItems='flex-start' spacing={3} style={{marginTop: '-.7em'}}>
                   <Grid item>
+                    <br/>
+                    <hr/>
+                    <Typography variant='body1'>Building decentralized software to help tenants find and keep rent-controlled apartments </Typography>
+                    <br/>
+                  </Grid>
+                  <Grid item container direction='row' spacing={6}>
+                    <Grid item >
+                      <Link
+                        to="/platform"
+                        style={{
+                          color: theme.palette.secondary.light,
+                          textDecoration: `none`,
+                        }}
+                      >
+                        <Button color='inherit' variant='outlined'>Platform</Button>
+                      </Link>
+                    </Grid>
+                    <Grid item>
+                      <Link
+                        to="/team"
+                        style={{
+                          color: theme.palette.secondary.light,
+                          textDecoration: `none`,
+                        }}
+                      >
+                        <Button color='inherit' variant='outlined'>Team</Button>
+                      </Link>
+                    </Grid>
+                  </Grid>
+                  
                   <hr/>
-                  </Grid>
-                  <Grid item >
-                    <Link
-                      to="/platform"
-                      style={{
-                        color: theme.palette.secondary.light,
-                        textDecoration: `none`,
-                      }}
-                    >
-                      <Button color='inherit' variant='outlined'>Platform</Button>
-                    </Link>
-                  </Grid>
-                  <Grid item>
-                    <Link
-                      to="/team"
-                      style={{
-                        color: theme.palette.secondary.light,
-                        textDecoration: `none`,
-                      }}
-                    >
-                      <Button color='inherit' variant='outlined'>Team</Button>
-                    </Link>
-                  </Grid>
-                  <hr/>
-                </Grid>
+
               </Grid>
             </Grid>
             
           </Grid>        
           <Grid item>
+
             <Hidden smDown>
-                <div  onClick={() => scrollTo('#index1')} style={{ cursor: 'grab', float: 'none', margin: '5em auto'}}>
+                <div  className='downArrow' onClick={() => scrollTo('#home')} style={{ cursor: 'grab', float: 'none', margin: '10em auto'}}>
                   <div
                     style={{
                       color: theme.palette.secondary.light,
@@ -90,7 +95,7 @@ const IndexHeader = () => {
           </Grid>
         </Grid>
         </header>
-        <Wave fill={theme.palette.secondary.light} paused={false}
+        <Wave id='home' fill={theme.palette.secondary.light} paused={false}
             options={{
               height: 30,
               amplitude: 10,
@@ -101,7 +106,7 @@ const IndexHeader = () => {
               cursor: 'grab',
               marginTop: '-7em'
             }}
-            onClick={() => scrollTo('#index1')}
+            onClick={() => scrollTo('#home')}
         ></Wave>
     </ThemeProvider>
   )

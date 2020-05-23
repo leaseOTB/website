@@ -13,12 +13,12 @@ import Img from "gatsby-image"
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-const PlatformETH = (props) => {
+const IndexImage1 = () => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "platform-ETH.png" }) {
+      placeholderImage: file(relativePath: { eq: "leaseotb-chain.png"}) {
         childImageSharp {
-          fluid(maxWidth: 1200) {
+          fluid(maxWidth: 400) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -26,7 +26,7 @@ const PlatformETH = (props) => {
     }
   `)
 
-  return <Img style={{width: '20em', marginLeft: '5em'}} fluid={data.placeholderImage.childImageSharp.fluid} />
+  return <Img style={{marginRight: '2em'}} fluid={data.placeholderImage.childImageSharp.fluid} />
 }
 
-export default PlatformETH
+export default IndexImage1

@@ -16,12 +16,16 @@ const Careers = (props: PageProps) => (
       <br/>
       <br/>
       <br/>
+      <br/>
 
-      <Typography variant='h2' color='secondary' style={{cursor: 'default'}}>Internship Program</Typography>
-
+      <Typography variant='h2' color='secondary' style={{cursor: 'default'}}>Open Roles</Typography>
 
       <br/>
       <br/>     
+      <Typography variant='h4' color='secondary' style={{cursor: 'default'}}>Internships</Typography>
+
+      <br/>     
+      <hr/>
 
       <Grid container direction='row' justify='flex-start' alignItems='flex-start' spacing={3}>
         <Grid item xs={10} sm={4} md={4}>

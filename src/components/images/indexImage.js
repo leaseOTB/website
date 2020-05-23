@@ -18,7 +18,7 @@ const IndexImage = () => {
     query {
       placeholderImage: file(relativePath: { eq: "leaseotb-people.png"}) {
         childImageSharp {
-          fluid(maxWidth: 200) {
+          fluid(maxWidth: 400) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -26,7 +26,7 @@ const IndexImage = () => {
     }
   `)
 
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+  return <Img style={{marginLeft: '2em'}} fluid={data.placeholderImage.childImageSharp.fluid} />
 }
 
 export default IndexImage
