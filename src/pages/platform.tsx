@@ -35,7 +35,7 @@ const Platform = () => (
         <Grid container direction='row' justify='space-around' alignItems='center' spacing={0} >
           <Grid item xs={12} sm={6} >
             <hr/>
-            <Typography variant='body1' color='secondary'>The Lease on the Block platform is a containerized private Ethereum network for lease processing and storage</Typography>  
+            <Typography variant='body1' color='secondary'>The Lease on the Block platform is a containerized private Ethereum network for lease processing and storage.</Typography>  
             <br/> 
             <Typography variant='body1' color='secondary'>Role tokens establish idenity, smart contracts create, store, and modify lease and property documents.</Typography>  
           </Grid>
@@ -66,7 +66,6 @@ const Platform = () => (
         <br id='demo'/>
         <br />
         <br/>
-
         <br/>
         <Typography  variant='h4' color='secondary' style={{cursor: 'default'}}>New York City - Demo</Typography>
         <br/>
@@ -79,7 +78,6 @@ const Platform = () => (
             </Grid>
           </Hidden>
           <Grid item xs={12} sm={6} >
-           
             <hr/>
             <Typography variant='body1' color='secondary'>Our NYC demo was awarded 1st place in the Sustianable Cities Catagory of the 2020 BSIC Hackathon.</Typography>  
             <br/> 

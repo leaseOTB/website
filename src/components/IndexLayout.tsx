@@ -18,7 +18,7 @@ import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 const IndexLayout = ({ children }) => {
    
   return (
-    <div style={{background: '#CFEBEC'}}>
+    <div style={{background: 'white'}}>
       <IndexHeader/>
       <div
         style={{
@@ -38,7 +38,7 @@ const IndexLayout = ({ children }) => {
         ContainerClassName="AnyClassForContainer"
         TransitionClassName="AnyClassForTransition"
         AnimationDuration={200}
-        style={{color: '#E86D48', background: 'none', cursor: 'grab', textDecoration: 'none', marginTop: '5em'}}
+        style={{color: '#E86D48', background: 'white', padding: '.3em .5em .3em .5em', borderRadius: '2em', cursor: 'grab', textDecoration: 'none', marginTop: '5em'}}
       >
         <KeyboardArrowUpIcon style={{fontSize: '3em'}}/>
       </ScrollUpButton>

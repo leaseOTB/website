@@ -21,7 +21,7 @@ const IndexPage = () => {
           <Typography id='platform' variant='h3' color='secondary' style={{cursor: 'default'}}>What is Lease on the Block?</Typography>
           <br/>
 
-            <Grid container direction='row' justify='center' alignItems='center' spacing={0} >
+            <Grid container direction='row' justify='flex-start' alignItems='center' >
               <Grid item xs={12} sm={6} >
                 <Typography variant='h6' color='secondary'>Lease on the Block is a governance product designed to preserve affordable housing apartments in New York City.</Typography>
                 <br/>

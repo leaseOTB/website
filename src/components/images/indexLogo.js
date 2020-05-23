@@ -13,7 +13,7 @@ import Img from "gatsby-image"
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-const IndexLogo = (props) => {
+const IndexLogo = () => {
   const data = useStaticQuery(graphql`
     query {
       placeholderImage: file(relativePath: { eq: "header-logo.png" }) {
@@ -26,7 +26,7 @@ const IndexLogo = (props) => {
     }
   `)
 
-  return <Img style={{width: '20em', margin: 'auto 0'}} fluid={data.placeholderImage.childImageSharp.fluid} />
+  return <Img style={{width: '25em', margin: '0'}} fluid={data.placeholderImage.childImageSharp.fluid} />
 }
 
 export default IndexLogo
