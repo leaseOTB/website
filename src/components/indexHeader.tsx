@@ -21,13 +21,13 @@ const IndexHeader = () => {
           minHeight: '100vh',
         }}
       >
-      <Grid container style={{minHeight: '100vh', paddingTop: '10em', padding: '3em', color: theme.palette.secondary.light}} direction='column' justify='flex-start' alignItems='center' spacing={9} >
+      <Grid container style={{minHeight: '100vh', paddingTop: '10em', padding: '3em', color: theme.palette.secondary.light}} direction='column' justify='flex-end' alignItems='center' spacing={5} >
           <Grid item>
             <br/>
 
             
-            <Grid container direction='row' justify='center' alignItems='flex-start'>
-              <Grid item sm={12} md={5}>
+            <Grid container direction='row' justify='flex-start' alignItems='flex-start'>
+              <Grid item sm={12} md={6}>
                 <Link
                   to="/"
                   style={{
@@ -38,11 +38,11 @@ const IndexHeader = () => {
                 <IndexLogo/>
               </Link>
               </Grid>
-                <Grid item sm={12} md={5} container direction='column-reverse' justify='center' alignItems='flex-start' spacing={3} style={{marginTop: '-.7em'}}>
+                <Grid item sm={12} md={6} container direction='column-reverse' justify='center' alignItems='flex-start' spacing={3} style={{marginTop: '-.7em'}}>
                   <Grid item>
                     <br/>
                     <hr/>
-                    <Typography variant='body1'>Building decentralized software to help tenants find and keep rent-controlled apartments </Typography>
+                    <Typography variant='h6'>Helping New York find and keep rent-stablized apartments</Typography>
                     <br/>
                   </Grid>
                   <Grid item container direction='row' spacing={6}>
@@ -95,12 +95,12 @@ const IndexHeader = () => {
           </Grid>
         </Grid>
         </header>
-        <Wave id='home' fill={theme.palette.secondary.light} paused={false}
+        <Wave id='home' fill={'white'} paused={false}
             options={{
               height: 30,
-              amplitude: 10,
-              speed: 0.25,
-              points: 4
+              amplitude: 20,
+              speed: .1,
+              points: 10
             }}
             style={{
               cursor: 'grab',

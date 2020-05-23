@@ -625,7 +625,7 @@ pre tt:after {
 .AnyClassForContainer {
   position: fixed;
   right: 5%;
-  top: -150px;
+  top: -200px;
   transition: top 0.5s;
   font-size: 20px;
   padding: 10px;
