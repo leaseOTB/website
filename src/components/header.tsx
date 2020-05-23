@@ -5,7 +5,7 @@ import HeaderLogo from './images/headerLogo'
 import IndexLogo from './images/indexLogo'
 import scrollTo from 'gatsby-plugin-smoothscroll'
 
-import { Grid, AppBar, Typography, Toolbar, ThemeProvider, IconButton, Button, Tab, Tabs, withStyles} from '@material-ui/core';
+import { Grid, AppBar, Hidden, Typography, Toolbar, ThemeProvider, IconButton, Button, Tab, Tabs, withStyles} from '@material-ui/core';
 import theme from './theme'
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward'
 
@@ -49,6 +49,7 @@ const Header = (page: any) => {
                 </Link>
               </Grid>
               
+              <Hidden xsDown>
               <Grid item>
                 <Link
                   to="/careers"
@@ -60,6 +61,8 @@ const Header = (page: any) => {
                   <Button color='primary' variant='outlined'>Join</Button>
                 </Link>
               </Grid>
+              </Hidden>
+              
               
             </Grid>
           </Toolbar>

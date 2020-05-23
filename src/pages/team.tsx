@@ -8,6 +8,7 @@ import {ThemeProvider, Grid, Typography, Button, Card, IconButton} from '@materi
 import TwitterIcon from '@material-ui/icons/Twitter'
 import GitHubIcon from '@material-ui/icons/GitHub'
 import LinkedInIcon from '@material-ui/icons/LinkedIn'
+import AddIcon from '@material-ui/icons/Add'
 
 import theme from '../components/theme'
 import Zach from '../components/images/team/zach'

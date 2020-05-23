@@ -15,16 +15,7 @@ import theme from './theme'
 import ScrollUpButton from "react-scroll-up-button"; //Add this line Here
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 
-const Layout = ({ children }, page: any) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+const Layout = ({ children }) => {
    
   return (
     <div style={{background: '#CFEBEC'}}>
@@ -39,7 +30,7 @@ const Layout = ({ children }, page: any) => {
       >
         <KeyboardArrowUpIcon style={{fontSize: '3em'}}/>
       </ScrollUpButton>
-      <Header page={page}/>
+      <Header/>
       <div
         style={{
           margin: `0 auto`,
@@ -55,8 +46,7 @@ const Layout = ({ children }, page: any) => {
 }
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-  page: PropTypes.string,
+  children: PropTypes.node,
 }
 
 export default Layout

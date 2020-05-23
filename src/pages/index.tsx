@@ -9,9 +9,9 @@ import {ThemeProvider, Grid, Typography, Button, Card} from '@material-ui/core'
 import IndexLayout from '../components/IndexLayout'
 import Header from '../components/header'
 
-const IndexPage = (props: PageProps) => {
+const IndexPage = () => {
   return (
-    <IndexLayout page={props.path}>
+    <IndexLayout>
       <ThemeProvider theme={theme}>
       <div style={{minHeight: '100vh'}}>
         <SEO title="Home" />

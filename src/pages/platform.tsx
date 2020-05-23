@@ -18,15 +18,15 @@ import PlatformETH from '../components/images/platformETH'
 import PlatformToken from '../components/images/platformToken'
 import PlatformLogo from '../components/images/platformLogo.js'
 
-const Platform = (props: PageProps) => (
-  <Layout page={props.path}>
+const Platform = () => (
+  <Layout>
     <ThemeProvider theme={theme}>
       <SEO title="Platform" />
       <br id='intro'/>
       <br/>
       <br/>
       <br/>
-      <br/>
+      
       <br/>
       <div style={{padding: '3em'}}>
       <Typography id='platform' variant='h2' color='secondary' style={{cursor: 'default'}}>Platform</Typography>
@@ -57,13 +57,13 @@ const Platform = (props: PageProps) => (
           </Grid>
         </Grid>
         <br/>
-        <br/>
+        <br id='demo'/>
         <br/>
 
         <hr/>
         <br/>
         <br/>
-        <Typography id='demo' variant='h3' color='secondary' style={{cursor: 'default'}}>New York City Demo</Typography>
+        <Typography  variant='h3' color='secondary' style={{cursor: 'default'}}>New York City Demo</Typography>
         <br/>
         <br/>
         <br/>

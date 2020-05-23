@@ -8,7 +8,7 @@ import {ThemeProvider, Grid, Typography, Button, Card, IconButton} from '@materi
 import theme from '../components/theme'
 
 const Careers = (props: PageProps) => (
-  <Layout page={props.path}>
+  <Layout>
     <ThemeProvider theme={theme}>
     <SEO title="Careers" />
       <br/>
