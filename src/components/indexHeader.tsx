@@ -27,7 +27,7 @@ const IndexHeader = () => {
 
             
             <Grid container direction='row' justify='flex-start' alignItems='flex-start'>
-              <Grid item sm={12} md={6}>
+              <Grid item sm={12} md={8}>
                 <Link
                   to="/"
                   style={{
@@ -42,7 +42,7 @@ const IndexHeader = () => {
                   <Grid item>
                     <br/>
                     <hr/>
-                    <Typography variant='h6'>Helping New York find and keep rent-stablized apartments</Typography>
+                    <Typography variant='h6'>Helping New York find and keep rent stablized apartments</Typography>
                     <br/>
                   </Grid>
                   <Grid item container direction='row' spacing={6}>
@@ -69,17 +69,13 @@ const IndexHeader = () => {
                       </Link>
                     </Grid>
                   </Grid>
-                  
                   <hr/>
-
               </Grid>
             </Grid>
-            
           </Grid>        
-          <Grid item>
-
+          <Grid item xs={12}>
             <Hidden smDown>
-                <div  className='downArrow' onClick={() => scrollTo('#home')} style={{ cursor: 'grab', float: 'none', margin: '10em auto'}}>
+                <div  className='downArrow' onClick={() => scrollTo('#home')} style={{ cursor: 'grab', float: 'none', margin: '5em auto'}}>
                   <div
                     style={{
                       color: theme.palette.secondary.light,
@@ -98,13 +94,13 @@ const IndexHeader = () => {
         <Wave id='home' fill={'white'} paused={false}
             options={{
               height: 30,
-              amplitude: 20,
-              speed: .1,
+              amplitude: 10,
+              speed: .05,
               points: 10
             }}
             style={{
               cursor: 'grab',
-              marginTop: '-7em'
+              marginTop: '-8em'
             }}
             onClick={() => scrollTo('#home')}
         ></Wave>

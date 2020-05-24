@@ -67,7 +67,7 @@ const Platform = () => (
         <br />
         <br/>
         <br/>
-        <Typography  variant='h4' color='secondary' style={{cursor: 'default'}}>New York City - Demo</Typography>
+        <Typography  variant='h4' color='secondary' style={{cursor: 'default'}}>New York City Test Case</Typography>
         <br/>
         <br/>
         <br/>
