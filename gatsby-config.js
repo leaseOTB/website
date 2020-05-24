@@ -3,9 +3,7 @@ module.exports = {
     title: `Lease on the Block`,
     description: `Helping New York find and keep affordable housing using Ethereum blockchain technology.`,
     author: `@zachdt`,
-    siteMetadata: {
-      siteUrl: `https://leaseontheblock.care`,
-    }
+    siteUrl: `https://leaseontheblock.care`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
