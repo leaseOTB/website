@@ -6,21 +6,19 @@ module.exports = {
     siteUrl: `https://leaseontheblock.care`,
   },
   plugins: [
-    {
-      resolve: "gatsby-plugin-i18n",
-      options: {
-        langKeyDefault: "en",
-        useLangKeyLayout: false,
-        pagesPaths: [ './src/components/' ]
-        }
-      },
-    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `text`,
+        path: `${__dirname}/src/content`,
       },
     },
     `gatsby-transformer-sharp`,

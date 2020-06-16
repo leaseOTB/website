@@ -19,8 +19,9 @@ import {
 } from "@material-ui/core"
 import theme from "./theme"
 import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown"
+import JSONData from "../content/en/homePage.json"
 
-const IndexHeader = () => {
+function IndexHeader() {
   return (
     <ThemeProvider theme={theme}>
       <header
@@ -78,7 +79,7 @@ const IndexHeader = () => {
                   <br />
                   <hr />
                   <Typography variant="h6">
-                    Helping New York find and keep rent stablized apartments
+                    {JSONData.header.subText}
                   </Typography>
                   <br />
                 </Grid>
@@ -92,7 +93,7 @@ const IndexHeader = () => {
                       }}
                     >
                       <Button color="inherit" variant="outlined">
-                        Platform
+                        {JSONData.header.platformButton}
                       </Button>
                     </Link>
                   </Grid>
@@ -105,7 +106,7 @@ const IndexHeader = () => {
                       }}
                     >
                       <Button color="inherit" variant="outlined">
-                        Team
+                        {JSONData.header.teamButton}
                       </Button>
                     </Link>
                   </Grid>
