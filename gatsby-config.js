@@ -11,6 +11,8 @@ module.exports = {
       options: {
         langKeyDefault: "en",
         useLangKeyLayout: false,
+        pagesPaths: [ './src/components/' ]
+        }
       },
     },
     `gatsby-plugin-react-helmet`,
