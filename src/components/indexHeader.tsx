@@ -19,9 +19,10 @@ import {
 } from "@material-ui/core"
 import theme from "./theme"
 import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown"
-import JSONData from "../content/en/homePage.json"
+import { useIntl, FormattedMessage } from "gatsby-plugin-intl"
 
 function IndexHeader() {
+  const intl = useIntl()
   return (
     <ThemeProvider theme={theme}>
       <header
@@ -79,7 +80,7 @@ function IndexHeader() {
                   <br />
                   <hr />
                   <Typography variant="h6">
-                    {JSONData.header.subText}
+                    <FormattedMessage id="headerSubText" />
                   </Typography>
                   <br />
                 </Grid>
@@ -93,7 +94,7 @@ function IndexHeader() {
                       }}
                     >
                       <Button color="inherit" variant="outlined">
-                        {JSONData.header.platformButton}
+                        <FormattedMessage id="platformButton" />
                       </Button>
                     </Link>
                   </Grid>
@@ -106,7 +107,7 @@ function IndexHeader() {
                       }}
                     >
                       <Button color="inherit" variant="outlined">
-                        {JSONData.header.teamButton}
+                        <FormattedMessage id="teamButton" />
                       </Button>
                     </Link>
                   </Grid>

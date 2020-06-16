@@ -17,14 +17,15 @@ import {
 } from "@material-ui/core"
 import IndexLayout from "../components/IndexLayout"
 import Header from "../components/header"
-import JSONData from "../content/en/homePage.json"
+import { useIntl, FormattedMessage } from "gatsby-plugin-intl"
 
 const IndexPage = () => {
+  const intl = useIntl()
   return (
     <IndexLayout>
       <ThemeProvider theme={theme}>
         <div style={{ minHeight: "70vh" }}>
-          <SEO title="Home" />
+          <SEO title={intl.formatMessage({ id: "Home" })} />
           <div style={{ padding: "2em", marginBottom: "-3em" }}>
             <Typography
               id="platform"
@@ -32,7 +33,7 @@ const IndexPage = () => {
               color="secondary"
               style={{ cursor: "default" }}
             >
-              {JSONData.indexPage.title}
+              <FormattedMessage id="homeTitle" />
             </Typography>
             <br />
             <br />
@@ -46,12 +47,12 @@ const IndexPage = () => {
             >
               <Grid item xs={12} sm={6}>
                 <Typography variant="h6" color="secondary">
-                  {JSONData.indexPage.pOne}
+                  <FormattedMessage id="homeOne" />
                 </Typography>
                 <br />
                 <br />
                 <Typography variant="body1" color="secondary">
-                  {JSONData.indexPage.pTwo}
+                  <FormattedMessage id="homeTwo" />
                 </Typography>
               </Grid>
               <Hidden smDown>
@@ -77,7 +78,7 @@ const IndexPage = () => {
               </Grid>
               <Grid item xs={12} sm={6}>
                 <Typography variant="body1" color="secondary">
-                  {JSONData.indexPage.pThree}
+                  <FormattedMessage id="homeThree" />
                 </Typography>
               </Grid>
             </Grid>

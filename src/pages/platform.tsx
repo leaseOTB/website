@@ -23,52 +23,54 @@ import theme from "../components/theme"
 import PlatformETH from "../components/images/platformETH"
 import PlatformToken from "../components/images/platformToken"
 import PlatformLogo from "../components/images/platformLogo.js"
-import JSONData from "../content/en/platformPage.json"
+import { useIntl, FormattedMessage } from "gatsby-plugin-intl"
 
-const Platform = () => (
-  <Layout>
-    <ThemeProvider theme={theme}>
-      <SEO title="Platform" />
-      <br id="intro" />
-      <br />
-      <br />
-      <br />
-
-      <br />
-      <div style={{ padding: "2em" }}>
-        <Typography
-          id="platform"
-          variant="h2"
-          color="secondary"
-          style={{ cursor: "default" }}
-        >
-          {JSONData.platformPage.title}
-        </Typography>
+const Platform = () => {
+  const intl = useIntl()
+  return (
+    <Layout>
+      <ThemeProvider theme={theme}>
+        <SEO title="Platform" />
+        <br id="intro" />
         <br />
         <br />
-        <Grid
-          container
-          direction="row"
-          justify="space-around"
-          alignItems="center"
-          spacing={0}
-        >
-          <Grid item xs={12} sm={6}>
-            <hr />
-            <Typography variant="body1" color="secondary">
-              {JSONData.platformPage.pOne}
-            </Typography>
-            <br />
-            <Typography variant="body1" color="secondary">
-              {JSONData.platformPage.pTwo}
-            </Typography>
-          </Grid>
-          <Hidden smDown>
+        <br />
+
+        <br />
+        <div style={{ padding: "2em" }}>
+          <Typography
+            id="platform"
+            variant="h2"
+            color="secondary"
+            style={{ cursor: "default" }}
+          >
+            <FormattedMessage id="platformTitle" />
+          </Typography>
+          <br />
+          <br />
+          <Grid
+            container
+            direction="row"
+            justify="space-around"
+            alignItems="center"
+            spacing={0}
+          >
             <Grid item xs={12} sm={6}>
-              <PlatformETH />
+              <hr />
+              <Typography variant="body1" color="secondary">
+                <FormattedMessage id="platformOne" />
+              </Typography>
+              <br />
+              <Typography variant="body1" color="secondary">
+                <FormattedMessage id="platformTwo" />
+              </Typography>
             </Grid>
-          </Hidden>
-          {/*
+            <Hidden smDown>
+              <Grid item xs={12} sm={6}>
+                <PlatformETH />
+              </Grid>
+            </Hidden>
+            {/*
           <Grid item>
             <div  onClick={() => scrollTo('#demo')} style={{ cursor: 'grab', float: 'none', margin: '2em auto'}}>
               <div
@@ -85,53 +87,54 @@ const Platform = () => (
 
 
           */}
-        </Grid>
-        <br id="demo" />
-        <br />
-        <br />
-        <br />
-        <Typography
-          variant="h4"
-          color="secondary"
-          style={{ cursor: "default" }}
-        >
-          {JSONData.platformPage.titleTwo}
-        </Typography>
-        <br />
-        <br />
-        <br />
-        <Grid
-          container
-          direction="row"
-          justify="center"
-          alignItems="center"
-          spacing={0}
-        >
-          <Hidden smDown>
-            <Grid item xs={12} sm={6}>
-              <PlatformLogo />
-            </Grid>
-          </Hidden>
-          <Grid item xs={12} sm={6}>
-            <hr />
-            <Typography variant="body1" color="secondary">
-              {JSONData.platformPage.pThree}
-            </Typography>
-            <br />
-            <Button
-              href="https://nyc.leaseontheblock.care"
-              variant="outlined"
-              color="primary"
-            >
-              {JSONData.platformPage.bottomButton}
-            </Button>
           </Grid>
-        </Grid>
-        <br />
-        <br />
-      </div>
-    </ThemeProvider>
-  </Layout>
-)
+          <br id="demo" />
+          <br />
+          <br />
+          <br />
+          <Typography
+            variant="h4"
+            color="secondary"
+            style={{ cursor: "default" }}
+          >
+            <FormattedMessage id="platformTitleTwo" />
+          </Typography>
+          <br />
+          <br />
+          <br />
+          <Grid
+            container
+            direction="row"
+            justify="center"
+            alignItems="center"
+            spacing={0}
+          >
+            <Hidden smDown>
+              <Grid item xs={12} sm={6}>
+                <PlatformLogo />
+              </Grid>
+            </Hidden>
+            <Grid item xs={12} sm={6}>
+              <hr />
+              <Typography variant="body1" color="secondary">
+                <FormattedMessage id="platformThree" />
+              </Typography>
+              <br />
+              <Button
+                href="https://nyc.leaseontheblock.care"
+                variant="outlined"
+                color="primary"
+              >
+                <FormattedMessage id="platformBottomButton" />
+              </Button>
+            </Grid>
+          </Grid>
+          <br />
+          <br />
+        </div>
+      </ThemeProvider>
+    </Layout>
+  )
+}
 
 export default Platform

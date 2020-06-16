@@ -5,12 +5,13 @@ import { Typography, Grid, ThemeProvider, IconButton } from "@material-ui/core"
 import TwitterIcon from "@material-ui/icons/Twitter"
 import GitHubIcon from "@material-ui/icons/GitHub"
 import LinkedInIcon from "@material-ui/icons/LinkedIn"
-
+import Language from "./langaugeSelect"
 import theme from "./theme"
 import Platform from "../pages/platform"
-import JSONData from "../content/en/footer.json"
+import { useIntl, FormattedMessage } from "gatsby-plugin-intl"
 
 const Footer = () => {
+  const intl = useIntl()
   return (
     <ThemeProvider theme={theme}>
       <div
@@ -36,7 +37,7 @@ const Footer = () => {
                 }}
               >
                 <Typography variant="body1">
-                  {JSONData.footer.platformButton}
+                  <FormattedMessage id="platformButton" />
                 </Typography>
               </Link>
               <Link
@@ -48,7 +49,7 @@ const Footer = () => {
                 }}
               >
                 <Typography variant="body1">
-                  {JSONData.footer.teamButton}
+                  <FormattedMessage id="teamButton" />
                 </Typography>
               </Link>
               <Link
@@ -60,15 +61,17 @@ const Footer = () => {
                 }}
               >
                 <Typography variant="body1">
-                  {JSONData.footer.careerButtons}
+                  <FormattedMessage id="careerButton" />
                 </Typography>
               </Link>
             </Grid>
             <Typography variant="body2" color="primary">
-              © {new Date().getFullYear()} {JSONData.footer.copyrightText}
+              © {new Date().getFullYear()}{" "}
+              <FormattedMessage id="copyrightText" />
             </Typography>
+            <Language />
           </Grid>
-          {JSONData.footer.socialText}
+          <FormattedMessage id="socialText" />
           <Grid item xs={12} sm={3}>
             <IconButton
               style={{ color: theme.palette.secondary.light }}
