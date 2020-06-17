@@ -64,12 +64,15 @@ const Footer = () => {
                   <FormattedMessage id="careerButton" />
                 </Typography>
               </Link>
+              <Language />
+
             </Grid>
             <Typography variant="body2" color="primary">
               © {new Date().getFullYear()}{" "}
               <FormattedMessage id="copyrightText" />
             </Typography>
-            <Language />
+
+
           </Grid>
           <FormattedMessage id="socialText" />
           <Grid item xs={12} sm={3}>
