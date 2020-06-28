@@ -11,9 +11,11 @@ import {
   Button,
   Card,
   IconButton,
+  Hidden,
 } from "@material-ui/core"
 import theme from "../components/theme"
-
+import PlatformLogo from "../components/images/platformLogo.js"
+import Web3 from "../components/images/web3.js"
 import { useIntl, FormattedMessage } from "gatsby-plugin-intl"
 
 const About = (props: PageProps) => {
@@ -28,32 +30,50 @@ const About = (props: PageProps) => {
         <br />
         <br />
         <br />
-        <Typography
-          variant="h3"
-          color="secondary"
-          style={{ cursor: "default" }}
-        >
-          <FormattedMessage id="aboutButton" />
-        </Typography>
-        <br />
-
         <div>
           <Typography
-            variant="h4"
+            variant="h3"
             color="secondary"
             style={{ cursor: "default" }}
           >
-            <FormattedMessage id="aboutOurStoryTitle" />
+            <FormattedMessage id="aboutButton" />
           </Typography>
           <br />
-          <Typography
-            variant="body1"
-            color="secondary"
-            style={{ cursor: "default" }}
+          <br />
+          <Grid
+            container
+            direction="row"
+            justify="space-around"
+            alignItems="center"
+            spacing={0}
           >
-            <FormattedMessage id="aboutOurStory" />
-          </Typography>
+            <Grid item xs={12} sm={6}>
+              <Typography
+                variant="h4"
+                color="secondary"
+                style={{ cursor: "default" }}
+              >
+                <FormattedMessage id="aboutOurStoryTitle" />
+              </Typography>
+              <br />
+              <hr />
+              <Typography
+                variant="body1"
+                color="secondary"
+                style={{ cursor: "default" }}
+              >
+                <FormattedMessage id="aboutOurStory" />
+              </Typography>
+            </Grid>
+            <Hidden smDown>
+              <Grid item xs={12} sm={6}>
+                <Web3 />
+              </Grid>
+            </Hidden>
+          </Grid>
           <br />
+          <br />
+
           <Typography
             variant="h4"
             color="secondary"
@@ -62,13 +82,30 @@ const About = (props: PageProps) => {
             <FormattedMessage id="aboutOurVisionTitle" />
           </Typography>
           <br />
-          <Typography
-            variant="body1"
-            color="secondary"
-            style={{ cursor: "default" }}
+          <Grid
+            container
+            direction="row"
+            justify="center"
+            alignItems="center"
+            spacing={0}
           >
-            <FormattedMessage id="aboutOurVision" />
-          </Typography>
+            <Grid item xs={12} sm={6}>
+              <hr />
+
+              <Typography
+                variant="body1"
+                color="secondary"
+                style={{ cursor: "default" }}
+              >
+                <FormattedMessage id="aboutOurVision" />
+              </Typography>
+            </Grid>
+            <Hidden smDown>
+              <Grid item xs={12} sm={6}>
+                <PlatformLogo />
+              </Grid>
+            </Hidden>
+          </Grid>
         </div>
       </ThemeProvider>
     </Layout>
