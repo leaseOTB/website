@@ -35,7 +35,6 @@ const Careers = (props: PageProps) => {
         >
           <FormattedMessage id="careerTitle" />
         </Typography>
-
         <br />
         <br />
         <Typography
