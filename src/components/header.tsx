@@ -1,4 +1,3 @@
-import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import HeaderLogo from "./images/headerLogo"
@@ -20,6 +19,7 @@ import {
 import theme from "./theme"
 import ArrowDownwardIcon from "@material-ui/icons/ArrowDownward"
 import useScrollTrigger from "@material-ui/core/useScrollTrigger"
+import { Link } from "gatsby-plugin-intl"
 
 const Header = (page: any) => {
   return (
@@ -98,10 +98,9 @@ const Header = (page: any) => {
                 </Link>
               </Grid>
             </Hidden>
-            
-            
+
+
             */}
-           
           </Grid>
         </Toolbar>
       </AppBar>

@@ -1,6 +1,4 @@
 import React from "react"
-import { PageProps, Link } from "gatsby"
-
 import { Typography, Grid, ThemeProvider, IconButton } from "@material-ui/core"
 import TwitterIcon from "@material-ui/icons/Twitter"
 import GitHubIcon from "@material-ui/icons/GitHub"
@@ -8,7 +6,7 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn"
 import Language from "./langaugeSelect"
 import theme from "./theme"
 import Platform from "../pages/platform"
-import { useIntl, FormattedMessage } from "gatsby-plugin-intl"
+import { useIntl, FormattedMessage, Link } from "gatsby-plugin-intl"
 
 const Footer = () => {
   const intl = useIntl()
