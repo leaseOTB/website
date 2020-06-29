@@ -65,14 +65,11 @@ const Footer = () => {
                 </Typography>
               </Link>
               <Language />
-
             </Grid>
             <Typography variant="body2" color="primary">
               © {new Date().getFullYear()}{" "}
               <FormattedMessage id="copyrightText" />
             </Typography>
-
-
           </Grid>
           <FormattedMessage id="socialText" />
           <Grid item xs={12} sm={3}>
@@ -86,7 +83,7 @@ const Footer = () => {
             <IconButton
               style={{ color: theme.palette.secondary.light }}
               target="__blank"
-              href="https://github.com/zachdt"
+              href="https://github.com/leaseOTB"
             >
               <GitHubIcon />
             </IconButton>
