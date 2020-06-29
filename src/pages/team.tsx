@@ -157,6 +157,9 @@ const Team = (props: PageProps) => {
         </Grid>
         <br />
         <br />
+        <br />
+        <br />
+        <br />
         <Typography
           variant="h4"
           color="secondary"
@@ -166,7 +169,7 @@ const Team = (props: PageProps) => {
         </Typography>
 
         {/* COMMUNITY STARTS HERE */}
-
+        <br />
         <br />
         {/* Gael */}
         <Grid

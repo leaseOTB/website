@@ -26,7 +26,7 @@ const Layout = ({ children }) => {
         ContainerClassName="AnyClassForContainer"
         TransitionClassName="AnyClassForTransition"
         AnimationDuration={200}
-        style={{color: '#E86D48', background: '#CFEBEC', padding: '1em', borderRadius: '1em', cursor: 'grab', textDecoration: 'none', marginTop: '5em'}}
+        style={{color: '#E86D48', background: 'none', padding: '1em', borderRadius: '1em', cursor: 'grab', textDecoration: 'none', marginTop: '10em'}}
       >
         <KeyboardArrowUpIcon style={{fontSize: '3em'}}/>
       </ScrollUpButton>
