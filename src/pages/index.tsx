@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, PageProps } from "gatsby"
+import { PageProps } from "gatsby"
 
 import Layout from "../components/layout"
 import IndexImage from "../components/images/indexImage"
@@ -17,7 +17,7 @@ import {
 } from "@material-ui/core"
 import IndexLayout from "../components/IndexLayout"
 import Header from "../components/header"
-import { useIntl, FormattedMessage } from "gatsby-plugin-intl"
+import { useIntl, FormattedMessage, Link } from "gatsby-plugin-intl"
 
 const IndexPage = () => {
   const intl = useIntl()

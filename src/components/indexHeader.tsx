@@ -1,4 +1,3 @@
-import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import HeaderLogo from "./images/headerLogo"
@@ -19,7 +18,7 @@ import {
 } from "@material-ui/core"
 import theme from "./theme"
 import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown"
-import { useIntl, FormattedMessage } from "gatsby-plugin-intl"
+import { useIntl, FormattedMessage, Link } from "gatsby-plugin-intl"
 
 function IndexHeader() {
   const intl = useIntl()
