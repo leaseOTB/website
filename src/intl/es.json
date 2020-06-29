@@ -1,7 +1,12 @@
 {
   "Home": "Home",
+<<<<<<< HEAD
   "headerSubText": "Empower tenants and tenants organization and support affordable housing in metropolis",
   "platformButton": "Product",
+=======
+  "headerSubText": "Helping New York find and keep rent stablized apartments",
+  "platformButton": "Platform",
+>>>>>>> 43a3962303365ab256c4cf09033efa1abff91342
   "teamButton": "Team",
   "homeTitle": "What is Lease on the Block?",
   "homeOne": "Lease on the Block is open source proptech software to support affordable housing policies in Metropolises.",
