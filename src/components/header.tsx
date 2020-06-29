@@ -69,6 +69,19 @@ const Header = (page: any) => {
                 </Button>
               </Link>
             </Grid>
+            <Grid item>
+              <Link
+                to="/about"
+                style={{
+                  color: theme.palette.secondary.light,
+                  textDecoration: `none`,
+                }}
+              >
+                <Button color="inherit" variant="text">
+                  About Us
+                </Button>
+              </Link>
+            </Grid>
 
             <Hidden xsDown>
               <Grid item>

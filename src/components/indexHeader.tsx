@@ -111,6 +111,19 @@ function IndexHeader() {
                       </Button>
                     </Link>
                   </Grid>
+                  <Grid item>
+                    <Link
+                      to="/about"
+                      style={{
+                        color: theme.palette.secondary.light,
+                        textDecoration: `none`,
+                      }}
+                    >
+                      <Button color="inherit" variant="outlined">
+                        <FormattedMessage id="aboutButton" />
+                      </Button>
+                    </Link>
+                  </Grid>
                 </Grid>
                 <hr />
               </Grid>
