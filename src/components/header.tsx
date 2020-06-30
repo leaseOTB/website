@@ -19,7 +19,7 @@ import {
 import theme from "./theme"
 import ArrowDownwardIcon from "@material-ui/icons/ArrowDownward"
 import useScrollTrigger from "@material-ui/core/useScrollTrigger"
-import { Link } from "gatsby-plugin-intl"
+import { useIntl, FormattedMessage, Link } from "gatsby-plugin-intl"
 
 const Header = (page: any) => {
   return (
