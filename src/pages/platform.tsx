@@ -56,18 +56,16 @@ const Platform = () => {
             spacing={0}
           >
             <Grid item xs={12} sm={6}>
-              <hr />
+              <br />
               <Typography variant="body1" color="secondary">
                 <FormattedMessage id="platformOne" />
               </Typography>
               <br />
               <Typography variant="body1" color="secondary">
-                <FormattedMessage id="platformTwo" />
               </Typography>
             </Grid>
-            <Hidden smDown>
+            <Hidden xlUp>
               <Grid item xs={12} sm={6}>
-                <PlatformETH />
               </Grid>
             </Hidden>
             {/*
@@ -91,6 +89,8 @@ const Platform = () => {
           <br id="demo" />
           <br />
           <br />
+          <hr />
+
           <br />
           <Typography
             variant="h4"
@@ -115,7 +115,6 @@ const Platform = () => {
               </Grid>
             </Hidden>
             <Grid item xs={12} sm={6}>
-              <hr />
               <Typography variant="body1" color="secondary">
                 <FormattedMessage id="platformThree" />
               </Typography>

@@ -47,7 +47,7 @@ const About = (props: PageProps) => {
             alignItems="center"
             spacing={0}
           >
-            <Grid item xs={12} sm={6}>
+            <Grid item xs={12} sm={11}>
               <Typography
                 variant="h4"
                 color="secondary"
@@ -61,6 +61,7 @@ const About = (props: PageProps) => {
                 variant="body1"
                 color="secondary"
                 style={{ cursor: "default" }}
+
               >
                 <FormattedMessage id="aboutOurStory" />
               </Typography>
@@ -70,27 +71,21 @@ const About = (props: PageProps) => {
                 <Web3 />
               </Grid>
             </Hidden>
-          </Grid>
-          <br />
-          <br />
-
-          <Typography
-            variant="h4"
-            color="secondary"
-            style={{ cursor: "default" }}
-          >
-            <FormattedMessage id="aboutOurVisionTitle" />
-          </Typography>
-          <br />
-          <Grid
-            container
-            direction="row"
-            justify="center"
-            alignItems="center"
-            spacing={0}
-          >
-            <Grid item xs={12} sm={6}>
+            <Grid item xs={12} sm={11}>
+                <Typography
+                variant="h4"
+                color="secondary"
+                style={{ cursor: "default" }}
+              >
+                <FormattedMessage id="aboutOurVisionTitle" />
+              </Typography>
+              <br />
               <hr />
+
+            </Grid>
+          
+
+            <Grid item xs={12} sm={11}>
 
               <Typography
                 variant="body1"
@@ -100,12 +95,16 @@ const About = (props: PageProps) => {
                 <FormattedMessage id="aboutOurVision" />
               </Typography>
             </Grid>
-            <Hidden smDown>
-              <Grid item xs={12} sm={6}>
-                <PlatformLogo />
-              </Grid>
-            </Hidden>
           </Grid>
+          
+          <br />
+          <br />
+            
+
+          <br/>
+          <br/>
+          <br/>
+
         </div>
       </ThemeProvider>
     </Layout>

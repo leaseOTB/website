@@ -15,8 +15,7 @@ import theme from './theme'
 import ScrollUpButton from "react-scroll-up-button"; //Add this line Here
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 
-const Layout = ({ children }) => {
-   
+const Layout = ({ children, path}) => {
   return (
     <div style={{background: 'white'}}>
       <ScrollUpButton
@@ -47,6 +46,7 @@ const Layout = ({ children }) => {
 
 Layout.propTypes = {
   children: PropTypes.node,
+  path: PropTypes.string
 }
 
 export default Layout

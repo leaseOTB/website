@@ -52,7 +52,7 @@ const Header = (page: any) => {
                 }}
               >
                 <Button color="inherit" variant="text">
-                  About Us
+                  <FormattedMessage id="aboutButton" />
                 </Button>
               </Link>
             </Grid>
