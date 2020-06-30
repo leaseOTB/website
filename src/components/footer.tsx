@@ -26,6 +26,18 @@ const Footer = () => {
         <Grid container justify="space-between" alignItems="center">
           <Grid item xs={12} sm={7}>
             <Grid container direction="row" justify="flex-start">
+            <Link
+                to="/about"
+                style={{
+                  textDecoration: "none",
+                  color: theme.palette.secondary.light,
+                  marginRight: "2em",
+                }}
+              >
+                <Typography variant="body1">
+                  <FormattedMessage id="aboutButton" />
+                </Typography>
+              </Link>
               <Link
                 to="/platform"
                 style={{
@@ -50,20 +62,10 @@ const Footer = () => {
                   <FormattedMessage id="teamButton" />
                 </Typography>
               </Link>
-              <Link
-                to="/careers"
-                style={{
-                  textDecoration: "none",
-                  color: theme.palette.secondary.light,
-                  marginRight: "2em",
-                }}
-              >
-                <Typography variant="body1">
-                  <FormattedMessage id="careerButton" />
-                </Typography>
-              </Link>
-              <Language />
             </Grid>
+            <Grid item xs={11}>
+              <Language />
+            </Grid> 
             <Typography variant="body2" color="primary">
               © {new Date().getFullYear()}{" "}
               <FormattedMessage id="copyrightText" />
