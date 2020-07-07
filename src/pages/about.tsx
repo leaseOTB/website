@@ -88,6 +88,11 @@ const About = (props: PageProps) => {
                 <FormattedMessage id="aboutOurVision" />
               </Typography>
             </Grid>
+            <Hidden smDown>
+              <Grid item xs={12} sm={6}>
+                <PlatformLogo />
+              </Grid>
+            </Hidden>
           </Grid>
 
           <br />

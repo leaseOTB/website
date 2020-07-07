@@ -26,9 +26,11 @@ const IndexPage = () => {
         <div style={{ minHeight: "70vh" }}>
           <SEO title={intl.formatMessage({ id: "Home" })} />
           <div style={{ padding: "2em", marginBottom: "-3em" }}>
+            <br />
+            <br />
             <Typography
               id="platform"
-              variant="h3"
+              variant="h2"
               color="secondary"
               style={{ cursor: "default" }}
             >
@@ -37,7 +39,6 @@ const IndexPage = () => {
             <br />
             <br />
             <br />
-
             <Grid
               container
               direction="row"
@@ -62,9 +63,7 @@ const IndexPage = () => {
             </Grid>
             <br />
             <br />
-
             <br />
-
             <br />
             <Grid
               container

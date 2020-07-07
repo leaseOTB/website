@@ -98,8 +98,6 @@ const Header = (page: any) => {
                 </Link>
               </Grid>
             </Hidden>
-
-
             */}
           </Grid>
         </Toolbar>
