@@ -31,10 +31,6 @@ const Team = (props: PageProps) => {
         <br />
         <br />
         <br />
-        <br />
-        <br />
-        <br />
-
         <Typography
           variant="h2"
           color="secondary"

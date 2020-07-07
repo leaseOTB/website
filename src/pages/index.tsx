@@ -15,14 +15,13 @@ import {
   Button,
   Card,
 } from "@material-ui/core"
-import IndexLayout from "../components/IndexLayout"
 import Header from "../components/header"
 import { useIntl, FormattedMessage, Link } from "gatsby-plugin-intl"
 
 const IndexPage = () => {
   const intl = useIntl()
   return (
-    <IndexLayout>
+    <Layout>
       <ThemeProvider theme={theme}>
         <div style={{ minHeight: "70vh" }}>
           <SEO title={intl.formatMessage({ id: "Home" })} />
@@ -85,7 +84,7 @@ const IndexPage = () => {
           </div>
         </div>
       </ThemeProvider>
-    </IndexLayout>
+    </Layout>
   )
 }
 

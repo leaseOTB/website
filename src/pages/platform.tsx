@@ -31,15 +31,11 @@ const Platform = () => {
     <Layout>
       <ThemeProvider theme={theme}>
         <SEO title="Platform" />
-        <br id="intro" />
         <br />
         <br />
         <br />
-
-        <br />
-        <div style={{ padding: "2em" }}>
+        <div>
           <Typography
-            id="platform"
             variant="h2"
             color="secondary"
             style={{ cursor: "default" }}
@@ -61,12 +57,10 @@ const Platform = () => {
                 <FormattedMessage id="platformOne" />
               </Typography>
               <br />
-              <Typography variant="body1" color="secondary">
-              </Typography>
+              <Typography variant="body1" color="secondary"></Typography>
             </Grid>
             <Hidden xlUp>
-              <Grid item xs={12} sm={6}>
-              </Grid>
+              <Grid item xs={12} sm={6}></Grid>
             </Hidden>
             {/*
           <Grid item>
