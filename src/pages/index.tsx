@@ -4,7 +4,7 @@ import { PageProps } from "gatsby"
 import Layout from "../components/layout"
 import IndexImage from "../components/images/indexImage"
 import IndexImage1 from "../components/images/indexImage1"
-
+import Splash from "../components/splash"
 import SEO from "../components/seo"
 import theme from "../components/theme"
 import {
@@ -28,14 +28,7 @@ const IndexPage = () => {
           <div style={{ padding: "2em", marginBottom: "-3em" }}>
             <br />
             <br />
-            <Typography
-              id="platform"
-              variant="h2"
-              color="secondary"
-              style={{ cursor: "default" }}
-            >
-              <FormattedMessage id="homeTitle" />
-            </Typography>
+            <Splash />
             <br />
             <br />
             <br />

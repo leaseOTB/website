@@ -3,19 +3,7 @@ import React from "react"
 import HeaderLogo from "./images/headerLogo"
 import IndexLogo from "./images/indexLogo"
 import scrollTo from "gatsby-plugin-smoothscroll"
-import {
-  Grid,
-  AppBar,
-  Hidden,
-  Typography,
-  Toolbar,
-  ThemeProvider,
-  IconButton,
-  Button,
-  Tab,
-  Tabs,
-  withStyles,
-} from "@material-ui/core"
+import { Grid, AppBar, Toolbar, ThemeProvider, Button } from "@material-ui/core"
 import theme from "./theme"
 import ArrowDownwardIcon from "@material-ui/icons/ArrowDownward"
 import useScrollTrigger from "@material-ui/core/useScrollTrigger"
@@ -47,7 +35,7 @@ const Header = (page: any) => {
               <Link
                 to="/about"
                 style={{
-                  color: theme.palette.secondary.light,
+                  color: theme.palette.primary.headerLink,
                   textDecoration: `none`,
                 }}
               >
@@ -60,7 +48,7 @@ const Header = (page: any) => {
               <Link
                 to="/platform"
                 style={{
-                  color: theme.palette.secondary.light,
+                  color: theme.palette.primary.headerLink,
                   textDecoration: `none`,
                 }}
               >
@@ -73,7 +61,7 @@ const Header = (page: any) => {
               <Link
                 to="/team"
                 style={{
-                  color: theme.palette.secondary.light,
+                  color: theme.palette.primary.headerLink,
                   textDecoration: `none`,
                 }}
               >
