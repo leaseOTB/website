@@ -9,7 +9,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
-import Footer from "./footer"
+import FooterComponent from "./footer"
 import "./layout.css"
 import theme from "./theme"
 import ScrollUpButton from "react-scroll-up-button" //Add this line Here
@@ -48,8 +48,8 @@ const Layout = ({ children, path }) => {
         }}
       >
         <main>{children}</main>
-        <Footer />
       </div>
+      <FooterComponent />
     </div>
   )
 }
