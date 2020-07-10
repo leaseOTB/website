@@ -78,7 +78,6 @@ const About = (props: PageProps) => {
               <br />
               <hr />
             </Grid>
-
             <Grid item xs={12} sm={11}>
               <Typography
                 variant="body1"
@@ -94,11 +93,6 @@ const About = (props: PageProps) => {
               </Grid>
             </Hidden>
           </Grid>
-
-          <br />
-          <br />
-
-          <br />
           <br />
           <br />
         </div>

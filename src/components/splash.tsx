@@ -30,6 +30,7 @@ const Splash = () => {
           justifyContent: "center",
           alignItems: "center",
           maxWidth: "lg",
+          flexWrap: "wrap",
         }}
       >
         <Typography
