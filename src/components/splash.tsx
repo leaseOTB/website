@@ -30,7 +30,6 @@ const Splash = () => {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          flexWrap: "wrap",
         }}
       >
         <Typography

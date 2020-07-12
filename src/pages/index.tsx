@@ -22,21 +22,26 @@ const IndexPage = () => {
   return (
     <Layout>
       <ThemeProvider theme={theme}>
-        <div style={{ minHeight: "70vh" }}>
+        <div
+          style={{
+            minHeight: "70vh",
+          }}
+        >
           <SEO title={intl.formatMessage({ id: "Home" })} />
           <div style={{ padding: "2em", marginBottom: "-3em" }}>
             <br />
             <br />
             <Splash />
-            <br />
-            <br />
-            <br />
             <Grid
               container
               direction="row"
               justify="center"
               alignItems="center"
+              alignContent="center"
             >
+              <br />
+              <br />
+              <br />
               <Grid item xs={12} sm={6}>
                 <Typography
                   variant="h6"
