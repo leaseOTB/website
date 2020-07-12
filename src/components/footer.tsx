@@ -7,98 +7,142 @@ import Language from "./langaugeSelect"
 import theme from "./theme"
 import Platform from "../pages/platform"
 import { useIntl, FormattedMessage, Link } from "gatsby-plugin-intl"
+import { Footer } from "@leaseOTB/ui-components"
 
-const Footer = () => {
+const FooterComponent = () => {
   const intl = useIntl()
   return (
     <ThemeProvider theme={theme}>
       <div
         style={{
-          minHeight: "4em",
-          backgroundColor: theme.palette.secondary.main,
-          color: theme.palette.secondary.light,
-          marginTop: "2em",
-          padding: "1em 1em .5em 2em",
-          borderRadius: "1em",
-          boxShadow: `150px 10px ${theme.palette.primary.main}`,
+          backgroundColor: theme.palette.secondary.white,
+          color: theme.palette.secondary.main,
+          width: "100%",
+          height: "30vh",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          borderTop: "1px solid rgb(150,150,150)",
         }}
       >
-        <Grid container justify="space-between" alignItems="center">
-          <Grid item xs={12} sm={7}>
-            <Grid container direction="row" justify="flex-start">
-            <Link
-                to="/about"
+        <div
+          style={{
+            width: "80%",
+            padding: "1em 3em 1em 3em",
+            minHeight: "4em",
+          }}
+        >
+          <Grid container justify="space-between" alignItems="center">
+            <Grid item xs={12} sm={7}>
+              <Grid container direction="row" justify="flex-start">
+                <Link
+                  to="/about"
+                  style={{
+                    textDecoration: "none",
+                    color: theme.palette.secondary.main,
+                    marginRight: "2em",
+                  }}
+                >
+                  <Typography
+                    variant="body1"
+                    style={{
+                      fontFamily: "Gilroy Ultra Light",
+                      fontWeight: "bolder",
+                    }}
+                  >
+                    <FormattedMessage id="aboutButton" />
+                  </Typography>
+                </Link>
+                <Link
+                  to="/platform"
+                  style={{
+                    textDecoration: "none",
+                    color: theme.palette.secondary.main,
+                    marginRight: "2em",
+                  }}
+                >
+                  <Typography
+                    variant="body1"
+                    style={{
+                      fontFamily: "Gilroy Ultra Light",
+                      fontWeight: "bolder",
+                    }}
+                  >
+                    <FormattedMessage id="platformButton" />
+                  </Typography>
+                </Link>
+                <Link
+                  to="/team"
+                  style={{
+                    textDecoration: "none",
+                    color: theme.palette.secondary.main,
+                    marginRight: "2em",
+                  }}
+                >
+                  <Typography
+                    variant="body1"
+                    style={{
+                      fontFamily: "Gilroy Ultra Light",
+                      fontWeight: "bolder",
+                    }}
+                  >
+                    <FormattedMessage id="teamButton" />
+                  </Typography>
+                </Link>
+              </Grid>
+              <Grid item xs={11}>
+                <Language />
+              </Grid>
+              <Typography
+                variant="body2"
+                color="secondary"
                 style={{
-                  textDecoration: "none",
-                  color: theme.palette.secondary.light,
-                  marginRight: "2em",
+                  cursor: `default`,
+                  fontFamily: "Gilroy Ultra Light",
+                  fontWeight: "bolder",
                 }}
               >
-                <Typography variant="body1">
-                  <FormattedMessage id="aboutButton" />
-                </Typography>
-              </Link>
-              <Link
-                to="/platform"
-                style={{
-                  textDecoration: "none",
-                  color: theme.palette.secondary.light,
-                  marginRight: "2em",
-                }}
-              >
-                <Typography variant="body1">
-                  <FormattedMessage id="platformButton" />
-                </Typography>
-              </Link>
-              <Link
-                to="/team"
-                style={{
-                  textDecoration: "none",
-                  color: theme.palette.secondary.light,
-                  marginRight: "2em",
-                }}
-              >
-                <Typography variant="body1">
-                  <FormattedMessage id="teamButton" />
-                </Typography>
-              </Link>
+                © {new Date().getFullYear()}{" "}
+                <FormattedMessage id="copyrightText" />
+              </Typography>
             </Grid>
-            <Grid item xs={11}>
-              <Language />
-            </Grid> 
-            <Typography variant="body2" color="primary">
-              © {new Date().getFullYear()}{" "}
-              <FormattedMessage id="copyrightText" />
+            <Typography
+              variant="body1"
+              style={{
+                fontFamily: "Gilroy Ultra Light",
+                fontWeight: "bolder",
+              }}
+            >
+              <FormattedMessage id="socialText" />
             </Typography>
+            <Grid item xs={12} sm={3}>
+              <IconButton
+                style={{ color: theme.palette.primary.main }}
+                target="__blank"
+                href="https://twitter.com/LeaseOTB"
+              >
+                <TwitterIcon />
+              </IconButton>
+              <IconButton
+                style={{ color: theme.palette.primary.main }}
+                target="__blank"
+                href="https://github.com/leaseOTB"
+              >
+                <GitHubIcon />
+              </IconButton>
+              <IconButton
+                style={{ color: theme.palette.primary.main }}
+                target="__blank"
+                href="https://www.linkedin.com/company/43276219"
+              >
+                <LinkedInIcon />
+              </IconButton>
+            </Grid>
           </Grid>
-          <FormattedMessage id="socialText" />
-          <Grid item xs={12} sm={3}>
-            <IconButton
-              style={{ color: theme.palette.secondary.light }}
-              target="__blank"
-              href="https://twitter.com/LeaseOTB"
-            >
-              <TwitterIcon />
-            </IconButton>
-            <IconButton
-              style={{ color: theme.palette.secondary.light }}
-              target="__blank"
-              href="https://github.com/leaseOTB"
-            >
-              <GitHubIcon />
-            </IconButton>
-            <IconButton
-              style={{ color: theme.palette.secondary.light }}
-              target="__blank"
-              href="https://www.linkedin.com/company/43276219"
-            >
-              <LinkedInIcon />
-            </IconButton>
-          </Grid>
-        </Grid>
+        </div>
       </div>
     </ThemeProvider>
   )
 }
 
-export default Footer
+export default FooterComponent

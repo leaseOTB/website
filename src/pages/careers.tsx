@@ -23,11 +23,6 @@ const Careers = (props: PageProps) => {
         <SEO title="Careers" />
         <br />
         <br />
-        <br />
-        <br />
-        <br />
-        <br />
-
         <Typography
           variant="h2"
           color="secondary"

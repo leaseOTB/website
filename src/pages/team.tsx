@@ -31,14 +31,14 @@ const Team = (props: PageProps) => {
         <br />
         <br />
         <br />
-        <br />
-        <br />
-        <br />
-
         <Typography
           variant="h2"
           color="secondary"
-          style={{ cursor: "default" }}
+          style={{
+            cursor: `default`,
+            fontFamily: "Gilroy Ultra Light",
+            fontWeight: "bolder",
+          }}
         >
           <FormattedMessage id="teamTitle" />
         </Typography>
@@ -47,7 +47,11 @@ const Team = (props: PageProps) => {
         <Typography
           variant="h4"
           color="secondary"
-          style={{ cursor: "default" }}
+          style={{
+            cursor: `default`,
+            fontFamily: "Gilroy Ultra Light",
+            fontWeight: "bolder",
+          }}
         >
           <FormattedMessage id="teamSubTitle" />
         </Typography>
@@ -163,7 +167,11 @@ const Team = (props: PageProps) => {
         <Typography
           variant="h4"
           color="secondary"
-          style={{ cursor: "default" }}
+          style={{
+            cursor: `default`,
+            fontFamily: "Gilroy Ultra Light",
+            fontWeight: "bolder",
+          }}
         >
           <FormattedMessage id="teamSubTitleTwo" />
         </Typography>

@@ -27,14 +27,15 @@ const About = (props: PageProps) => {
         <br />
         <br />
         <br />
-        <br />
-        <br />
-        <br />
         <div>
           <Typography
-            variant="h3"
+            variant="h2"
             color="secondary"
-            style={{ cursor: "default" }}
+            style={{
+              cursor: "default",
+              fontFamily: "Gilroy Ultra Light",
+              fontWeight: "bolder",
+            }}
           >
             <FormattedMessage id="aboutButton" />
           </Typography>
@@ -51,7 +52,11 @@ const About = (props: PageProps) => {
               <Typography
                 variant="h4"
                 color="secondary"
-                style={{ cursor: "default" }}
+                style={{
+                  cursor: "default",
+                  fontFamily: "Gilroy Ultra Light",
+                  fontWeight: "bolder",
+                }}
               >
                 <FormattedMessage id="aboutOurStoryTitle" />
               </Typography>
@@ -60,8 +65,11 @@ const About = (props: PageProps) => {
               <Typography
                 variant="body1"
                 color="secondary"
-                style={{ cursor: "default" }}
-
+                style={{
+                  cursor: "default",
+                  fontFamily: "Gilroy Ultra Light",
+                  fontWeight: "bold",
+                }}
               >
                 <FormattedMessage id="aboutOurStory" />
               </Typography>
@@ -72,39 +80,41 @@ const About = (props: PageProps) => {
               </Grid>
             </Hidden>
             <Grid item xs={12} sm={11}>
-                <Typography
+              <Typography
                 variant="h4"
                 color="secondary"
-                style={{ cursor: "default" }}
+                style={{
+                  cursor: "default",
+                  fontFamily: "Gilroy Ultra Light",
+                  fontWeight: "bolder",
+                }}
               >
                 <FormattedMessage id="aboutOurVisionTitle" />
               </Typography>
               <br />
               <hr />
-
             </Grid>
-          
-
             <Grid item xs={12} sm={11}>
-
               <Typography
                 variant="body1"
                 color="secondary"
-                style={{ cursor: "default" }}
+                style={{
+                  cursor: "default",
+                  fontFamily: "Gilroy Ultra Light",
+                  fontWeight: "bold",
+                }}
               >
                 <FormattedMessage id="aboutOurVision" />
               </Typography>
             </Grid>
+            <Hidden smDown>
+              <Grid item xs={12} sm={6}>
+                <PlatformLogo />
+              </Grid>
+            </Hidden>
           </Grid>
-          
           <br />
           <br />
-            
-
-          <br/>
-          <br/>
-          <br/>
-
         </div>
       </ThemeProvider>
     </Layout>

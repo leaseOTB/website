@@ -1,10 +1,9 @@
 import React from "react"
 import { PageProps } from "gatsby"
-
 import Layout from "../components/layout"
 import IndexImage from "../components/images/indexImage"
 import IndexImage1 from "../components/images/indexImage1"
-
+import Splash from "../components/splash"
 import SEO from "../components/seo"
 import theme from "../components/theme"
 import {
@@ -15,43 +14,55 @@ import {
   Button,
   Card,
 } from "@material-ui/core"
-import IndexLayout from "../components/IndexLayout"
 import Header from "../components/header"
 import { useIntl, FormattedMessage, Link } from "gatsby-plugin-intl"
 
 const IndexPage = () => {
   const intl = useIntl()
   return (
-    <IndexLayout>
+    <Layout>
       <ThemeProvider theme={theme}>
-        <div style={{ minHeight: "70vh" }}>
+        <div
+          style={{
+            minHeight: "70vh",
+          }}
+        >
           <SEO title={intl.formatMessage({ id: "Home" })} />
           <div style={{ padding: "2em", marginBottom: "-3em" }}>
-            <Typography
-              id="platform"
-              variant="h3"
-              color="secondary"
-              style={{ cursor: "default" }}
-            >
-              <FormattedMessage id="homeTitle" />
-            </Typography>
             <br />
             <br />
-            <br />
-
+            <Splash />
             <Grid
               container
               direction="row"
               justify="center"
               alignItems="center"
+              alignContent="center"
             >
+              <br />
+              <br />
+              <br />
               <Grid item xs={12} sm={6}>
-                <Typography variant="h6" color="secondary">
+                <Typography
+                  variant="h6"
+                  color="secondary"
+                  style={{
+                    fontFamily: "Gilroy Ultra Light",
+                    fontWeight: "bolder",
+                  }}
+                >
                   <FormattedMessage id="homeOne" />
                 </Typography>
                 <br />
                 <br />
-                <Typography variant="body1" color="secondary">
+                <Typography
+                  variant="body1"
+                  color="secondary"
+                  style={{
+                    fontFamily: "Gilroy Ultra Light",
+                    fontWeight: "bold",
+                  }}
+                >
                   <FormattedMessage id="homeTwo" />
                 </Typography>
               </Grid>
@@ -63,9 +74,7 @@ const IndexPage = () => {
             </Grid>
             <br />
             <br />
-
             <br />
-
             <br />
             <Grid
               container
@@ -77,7 +86,14 @@ const IndexPage = () => {
                 <IndexImage1 />
               </Grid>
               <Grid item xs={12} sm={6}>
-                <Typography variant="body1" color="secondary">
+                <Typography
+                  variant="body1"
+                  color="secondary"
+                  style={{
+                    fontFamily: "Gilroy Ultra Light",
+                    fontWeight: "bold",
+                  }}
+                >
                   <FormattedMessage id="homeThree" />
                 </Typography>
               </Grid>
@@ -85,7 +101,7 @@ const IndexPage = () => {
           </div>
         </div>
       </ThemeProvider>
-    </IndexLayout>
+    </Layout>
   )
 }
 
