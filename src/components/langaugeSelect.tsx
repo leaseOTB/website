@@ -1,5 +1,12 @@
 import React from "react"
-import { InputLabel, MenuItem, Select, FormControl, Grid, Typography } from "@material-ui/core"
+import {
+  InputLabel,
+  MenuItem,
+  Select,
+  FormControl,
+  Grid,
+  Typography,
+} from "@material-ui/core"
 import theme from "./theme"
 import Platform from "../pages/platform"
 import {
@@ -17,7 +24,7 @@ const languageName = {
 const Language = () => {
   return (
     <div>
-      <Grid container direction='row' justify='flex-start' alignItems='center' >
+      <Grid container direction="row" justify="flex-start" alignItems="center">
         <IntlContextConsumer>
           {({ languages, language: currentLocale }) =>
             languages.map(language => (
@@ -25,10 +32,15 @@ const Language = () => {
                 key={language}
                 onClick={() => changeLocale(language)}
                 style={{
-                  color: currentLocale === language ? `#E86D48` : `white`,
+                  color:
+                    currentLocale === language
+                      ? `#E86D48`
+                      : theme.palette.secondary.main,
                   margin: 10,
                   textDecoration: `underline`,
                   cursor: `pointer`,
+                  fontFamily: "Gilroy Ultra Light",
+                  fontWeight: "bold",
                 }}
               >
                 {languageName[language]}
@@ -37,7 +49,6 @@ const Language = () => {
           }
         </IntlContextConsumer>
       </Grid>
-      
     </div>
   )
 }

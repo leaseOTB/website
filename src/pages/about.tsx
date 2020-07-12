@@ -31,7 +31,11 @@ const About = (props: PageProps) => {
           <Typography
             variant="h2"
             color="secondary"
-            style={{ cursor: "default" }}
+            style={{
+              cursor: "default",
+              fontFamily: "Gilroy Ultra Light",
+              fontWeight: "bolder",
+            }}
           >
             <FormattedMessage id="aboutButton" />
           </Typography>
@@ -48,7 +52,11 @@ const About = (props: PageProps) => {
               <Typography
                 variant="h4"
                 color="secondary"
-                style={{ cursor: "default" }}
+                style={{
+                  cursor: "default",
+                  fontFamily: "Gilroy Ultra Light",
+                  fontWeight: "bolder",
+                }}
               >
                 <FormattedMessage id="aboutOurStoryTitle" />
               </Typography>
@@ -57,7 +65,11 @@ const About = (props: PageProps) => {
               <Typography
                 variant="body1"
                 color="secondary"
-                style={{ cursor: "default" }}
+                style={{
+                  cursor: "default",
+                  fontFamily: "Gilroy Ultra Light",
+                  fontWeight: "bold",
+                }}
               >
                 <FormattedMessage id="aboutOurStory" />
               </Typography>
@@ -71,7 +83,11 @@ const About = (props: PageProps) => {
               <Typography
                 variant="h4"
                 color="secondary"
-                style={{ cursor: "default" }}
+                style={{
+                  cursor: "default",
+                  fontFamily: "Gilroy Ultra Light",
+                  fontWeight: "bolder",
+                }}
               >
                 <FormattedMessage id="aboutOurVisionTitle" />
               </Typography>
@@ -82,7 +98,11 @@ const About = (props: PageProps) => {
               <Typography
                 variant="body1"
                 color="secondary"
-                style={{ cursor: "default" }}
+                style={{
+                  cursor: "default",
+                  fontFamily: "Gilroy Ultra Light",
+                  fontWeight: "bold",
+                }}
               >
                 <FormattedMessage id="aboutOurVision" />
               </Typography>

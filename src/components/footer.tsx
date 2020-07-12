@@ -15,12 +15,14 @@ const FooterComponent = () => {
     <ThemeProvider theme={theme}>
       <div
         style={{
-          backgroundColor: theme.palette.secondary.main,
-          color: theme.palette.secondary.light,
+          backgroundColor: theme.palette.secondary.white,
+          color: theme.palette.secondary.main,
+          width: "100%",
+          height: "30vh",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          width: "100%",
+          borderTop: "1px solid rgb(150,150,150)",
         }}
       >
         <div
@@ -28,7 +30,6 @@ const FooterComponent = () => {
             width: "80%",
             padding: "1em 3em 1em 3em",
             minHeight: "4em",
-            // marginTop: "2em",
           }}
         >
           <Grid container justify="space-between" alignItems="center">
@@ -38,11 +39,17 @@ const FooterComponent = () => {
                   to="/about"
                   style={{
                     textDecoration: "none",
-                    color: theme.palette.secondary.light,
+                    color: theme.palette.secondary.main,
                     marginRight: "2em",
                   }}
                 >
-                  <Typography variant="body1">
+                  <Typography
+                    variant="body1"
+                    style={{
+                      fontFamily: "Gilroy Ultra Light",
+                      fontWeight: "bolder",
+                    }}
+                  >
                     <FormattedMessage id="aboutButton" />
                   </Typography>
                 </Link>
@@ -50,11 +57,17 @@ const FooterComponent = () => {
                   to="/platform"
                   style={{
                     textDecoration: "none",
-                    color: theme.palette.secondary.light,
+                    color: theme.palette.secondary.main,
                     marginRight: "2em",
                   }}
                 >
-                  <Typography variant="body1">
+                  <Typography
+                    variant="body1"
+                    style={{
+                      fontFamily: "Gilroy Ultra Light",
+                      fontWeight: "bolder",
+                    }}
+                  >
                     <FormattedMessage id="platformButton" />
                   </Typography>
                 </Link>
@@ -62,11 +75,17 @@ const FooterComponent = () => {
                   to="/team"
                   style={{
                     textDecoration: "none",
-                    color: theme.palette.secondary.light,
+                    color: theme.palette.secondary.main,
                     marginRight: "2em",
                   }}
                 >
-                  <Typography variant="body1">
+                  <Typography
+                    variant="body1"
+                    style={{
+                      fontFamily: "Gilroy Ultra Light",
+                      fontWeight: "bolder",
+                    }}
+                  >
                     <FormattedMessage id="teamButton" />
                   </Typography>
                 </Link>
@@ -74,29 +93,45 @@ const FooterComponent = () => {
               <Grid item xs={11}>
                 <Language />
               </Grid>
-              <Typography variant="body2" color="primary">
+              <Typography
+                variant="body2"
+                color="secondary"
+                style={{
+                  cursor: `default`,
+                  fontFamily: "Gilroy Ultra Light",
+                  fontWeight: "bolder",
+                }}
+              >
                 © {new Date().getFullYear()}{" "}
                 <FormattedMessage id="copyrightText" />
               </Typography>
             </Grid>
-            <FormattedMessage id="socialText" />
+            <Typography
+              variant="body1"
+              style={{
+                fontFamily: "Gilroy Ultra Light",
+                fontWeight: "bolder",
+              }}
+            >
+              <FormattedMessage id="socialText" />
+            </Typography>
             <Grid item xs={12} sm={3}>
               <IconButton
-                style={{ color: theme.palette.secondary.light }}
+                style={{ color: theme.palette.primary.main }}
                 target="__blank"
                 href="https://twitter.com/LeaseOTB"
               >
                 <TwitterIcon />
               </IconButton>
               <IconButton
-                style={{ color: theme.palette.secondary.light }}
+                style={{ color: theme.palette.primary.main }}
                 target="__blank"
                 href="https://github.com/leaseOTB"
               >
                 <GitHubIcon />
               </IconButton>
               <IconButton
-                style={{ color: theme.palette.secondary.light }}
+                style={{ color: theme.palette.primary.main }}
                 target="__blank"
                 href="https://www.linkedin.com/company/43276219"
               >

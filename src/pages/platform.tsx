@@ -38,7 +38,11 @@ const Platform = () => {
           <Typography
             variant="h2"
             color="secondary"
-            style={{ cursor: "default" }}
+            style={{
+              cursor: `default`,
+              fontFamily: "Gilroy Ultra Light",
+              fontWeight: "bolder",
+            }}
           >
             <FormattedMessage id="platformTitle" />
           </Typography>
@@ -53,11 +57,27 @@ const Platform = () => {
           >
             <Grid item xs={12} sm={6}>
               <br />
-              <Typography variant="body1" color="secondary">
+              <Typography
+                variant="body1"
+                color="secondary"
+                style={{
+                  cursor: `default`,
+                  fontFamily: "Gilroy Ultra Light",
+                  fontWeight: "bold",
+                }}
+              >
                 <FormattedMessage id="platformOne" />
               </Typography>
               <br />
-              <Typography variant="body1" color="secondary"></Typography>
+              <Typography
+                variant="body1"
+                color="secondary"
+                style={{
+                  cursor: `default`,
+                  fontFamily: "Gilroy Ultra Light",
+                  fontWeight: "bold",
+                }}
+              ></Typography>
             </Grid>
             <Hidden xlUp>
               <Grid item xs={12} sm={6}></Grid>
@@ -89,7 +109,11 @@ const Platform = () => {
           <Typography
             variant="h4"
             color="secondary"
-            style={{ cursor: "default" }}
+            style={{
+              cursor: `default`,
+              fontFamily: "Gilroy Ultra Light",
+              fontWeight: "bolder",
+            }}
           >
             <FormattedMessage id="platformTitleTwo" />
           </Typography>
@@ -109,7 +133,15 @@ const Platform = () => {
               </Grid>
             </Hidden>
             <Grid item xs={12} sm={6}>
-              <Typography variant="body1" color="secondary">
+              <Typography
+                variant="body1"
+                color="secondary"
+                style={{
+                  cursor: `default`,
+                  fontFamily: "Gilroy Ultra Light",
+                  fontWeight: "bold",
+                }}
+              >
                 <FormattedMessage id="platformThree" />
               </Typography>
               <br />
@@ -117,6 +149,10 @@ const Platform = () => {
                 href="https://nyc.leaseontheblock.care"
                 variant="outlined"
                 color="primary"
+                style={{
+                  fontFamily: "Gilroy Ultra Light",
+                  fontWeight: "bolder",
+                }}
               >
                 <FormattedMessage id="platformBottomButton" />
               </Button>

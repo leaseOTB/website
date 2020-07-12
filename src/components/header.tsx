@@ -1,7 +1,6 @@
 import PropTypes from "prop-types"
 import React from "react"
-import HeaderLogo from "./images/headerLogo"
-import IndexLogo from "./images/indexLogo"
+import HeaderLogoDark from "./images/headerLogoDark"
 import scrollTo from "gatsby-plugin-smoothscroll"
 import {
   Grid,
@@ -45,6 +44,7 @@ const useStyles = makeStyles((theme: Theme) =>
         easing: theme.transitions.easing.sharp,
         duration: theme.transitions.duration.leavingScreen,
       }),
+      height: "70px",
     },
     appBarShift: {
       width: `calc(100% - ${drawerWidth}px)`,
@@ -113,14 +113,13 @@ const Header = (page: any) => {
       <Hidden smUp>
         <Grid item xs={12} sm={6} md={3}>
           <div className={classes.root}>
-            {/* <CssBaseline /> */}
             <AppBar
               position="fixed"
               className={clsx(classes.appBar, {
                 [classes.appBarShift]: open,
               })}
               style={{
-                backgroundColor: theme.palette.secondary.main,
+                backgroundColor: theme.palette.secondary.white,
                 boxShadow: "none",
               }}
             >
@@ -133,10 +132,10 @@ const Header = (page: any) => {
                     textDecoration: `none`,
                   }}
                 >
-                  <HeaderLogo width="15em" />
+                  <HeaderLogoDark width="15em" />
                 </Link>
                 <IconButton
-                  color="inherit"
+                  color={theme.palette.secondary.main}
                   aria-label="open drawer"
                   edge="end"
                   onClick={handleDrawerOpen}
@@ -171,11 +170,19 @@ const Header = (page: any) => {
                   <Link
                     to="/about"
                     style={{
-                      color: "black",
+                      color: theme.palette.secondary.main,
                       textDecoration: `none`,
+                      fontFamily: "Gilroy Ultra Light",
                     }}
                   >
-                    <Button color="inherit" variant="text">
+                    <Button
+                      color="inherit"
+                      variant="text"
+                      style={{
+                        fontFamily: "Gilroy Ultra Light",
+                        fontWeight: "bolder",
+                      }}
+                    >
                       <FormattedMessage id="aboutButton" />
                     </Button>
                   </Link>
@@ -184,11 +191,19 @@ const Header = (page: any) => {
                   <Link
                     to="/platform"
                     style={{
-                      color: "black",
+                      color: theme.palette.secondary.main,
                       textDecoration: `none`,
+                      fontFamily: "Gilroy Ultra Light",
                     }}
                   >
-                    <Button color="inherit" variant="text">
+                    <Button
+                      color="inherit"
+                      variant="text"
+                      style={{
+                        fontFamily: "Gilroy Ultra Light",
+                        fontWeight: "bolder",
+                      }}
+                    >
                       Platform
                     </Button>
                   </Link>
@@ -197,11 +212,19 @@ const Header = (page: any) => {
                   <Link
                     to="/team"
                     style={{
-                      color: "black",
+                      color: theme.palette.secondary.main,
                       textDecoration: `none`,
+                      fontFamily: "Gilroy Ultra Light",
                     }}
                   >
-                    <Button color="inherit" variant="text">
+                    <Button
+                      color="inherit"
+                      variant="text"
+                      style={{
+                        fontFamily: "Gilroy Ultra Light",
+                        fontWeight: "bolder",
+                      }}
+                    >
                       Team
                     </Button>
                   </Link>
@@ -215,9 +238,15 @@ const Header = (page: any) => {
         <Grid item xs={12} sm={6} md={"auto"}>
           <ThemeProvider theme={theme}>
             <AppBar
-              style={{ boxShadow: "none" }}
-              color="secondary"
+              style={{
+                boxShadow: "0px 0px 5px rgb(50,50,50)",
+                height: "70px",
+                justifyContent: "center",
+              }}
+              color="white"
               position="fixed"
+              display="flex"
+              justify="center"
             >
               <Toolbar variant="dense">
                 <Link
@@ -225,9 +254,10 @@ const Header = (page: any) => {
                   style={{
                     color: `white`,
                     textDecoration: `none`,
+                    fontFamily: "Gilroy Ultra Light",
                   }}
                 >
-                  <HeaderLogo width="15em" />
+                  <HeaderLogoDark width="15em" />
                 </Link>
                 <Grid
                   item
@@ -241,11 +271,19 @@ const Header = (page: any) => {
                     <Link
                       to="/about"
                       style={{
-                        color: theme.palette.primary.headerLink,
+                        color: theme.palette.secondary.main,
                         textDecoration: `none`,
+                        fontFamily: "Gilroy Ultra Light",
                       }}
                     >
-                      <Button color="inherit" variant="text">
+                      <Button
+                        color="inherit"
+                        variant="text"
+                        style={{
+                          fontFamily: "Gilroy Ultra Light",
+                          fontWeight: "bolder",
+                        }}
+                      >
                         <FormattedMessage id="aboutButton" />
                       </Button>
                     </Link>
@@ -254,11 +292,19 @@ const Header = (page: any) => {
                     <Link
                       to="/platform"
                       style={{
-                        color: theme.palette.primary.headerLink,
+                        color: theme.palette.secondary.main,
                         textDecoration: `none`,
+                        fontFamily: "Gilroy Ultra Light",
                       }}
                     >
-                      <Button color="inherit" variant="text">
+                      <Button
+                        color="inherit"
+                        variant="text"
+                        style={{
+                          fontFamily: "Gilroy Ultra Light",
+                          fontWeight: "bolder",
+                        }}
+                      >
                         Platform
                       </Button>
                     </Link>
@@ -267,11 +313,18 @@ const Header = (page: any) => {
                     <Link
                       to="/team"
                       style={{
-                        color: theme.palette.primary.headerLink,
+                        color: theme.palette.secondary.main,
                         textDecoration: `none`,
                       }}
                     >
-                      <Button color="inherit" variant="text">
+                      <Button
+                        color="inherit"
+                        variant="text"
+                        style={{
+                          fontFamily: "Gilroy Ultra Light",
+                          fontWeight: "bolder",
+                        }}
+                      >
                         Team
                       </Button>
                     </Link>

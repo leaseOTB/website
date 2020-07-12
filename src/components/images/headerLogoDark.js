@@ -13,10 +13,10 @@ import Img from "gatsby-image"
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-const HeaderLogo = props => {
+const HeaderLogoDark = props => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "header-logo.png" }) {
+      placeholderImage: file(relativePath: { eq: "header-dark.png" }) {
         childImageSharp {
           fluid(maxWidth: 1200) {
             ...GatsbyImageSharpFluid
@@ -34,4 +34,4 @@ const HeaderLogo = props => {
   )
 }
 
-export default HeaderLogo
+export default HeaderLogoDark

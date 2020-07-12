@@ -23,13 +23,13 @@ const Splash = () => {
     <ThemeProvider theme={theme}>
       <Container
         style={{
+          margin: "0px",
           padding: "0px",
           minHeight: "300px",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          maxWidth: "lg",
           flexWrap: "wrap",
         }}
       >
@@ -37,7 +37,14 @@ const Splash = () => {
           id="platform"
           variant="h2"
           color="secondary"
-          style={{ cursor: "default" }}
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            cursor: "default",
+            fontFamily: "Gilroy Ultra Light",
+            fontWeight: "bolder",
+            width: "100vw",
+          }}
         >
           <FormattedMessage id="homeTitle" />
         </Typography>
