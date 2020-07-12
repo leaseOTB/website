@@ -9,27 +9,37 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
-import Footer from './footer'
+import FooterComponent from "./footer"
 import "./layout.css"
-import theme from './theme'
-import ScrollUpButton from "react-scroll-up-button"; //Add this line Here
-import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
+import theme from "./theme"
+import ScrollUpButton from "react-scroll-up-button" //Add this line Here
+import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp"
 
-const Layout = ({ children, path}) => {
+const Layout = ({ children, path }) => {
   return (
-    <div style={{background: 'white'}}>
+    <div style={{ background: "white" }}>
       <ScrollUpButton
         StopPosition={0}
         ShowAtPosition={500}
-        EasingType='easeOutCubic'
+        EasingType="easeOutCubic"
         ContainerClassName="AnyClassForContainer"
         TransitionClassName="AnyClassForTransition"
         AnimationDuration={200}
-        style={{color: '#E86D48', background: 'none', padding: '1em', borderRadius: '1em', cursor: 'grab', textDecoration: 'none', marginTop: '10em'}}
+        style={{
+          color: "#E86D48",
+          background: "none",
+          padding: "1em",
+          borderRadius: "1em",
+          cursor: "grab",
+          textDecoration: "none",
+          marginTop: "10em",
+        }}
       >
-        <KeyboardArrowUpIcon style={{fontSize: '3em'}}/>
+        <KeyboardArrowUpIcon style={{ fontSize: "3em" }} />
       </ScrollUpButton>
-      <Header/>
+      <Header />
+      <br />
+      <br />
       <div
         style={{
           margin: `0 auto`,
@@ -38,15 +48,15 @@ const Layout = ({ children, path}) => {
         }}
       >
         <main>{children}</main>
-        <Footer/>
       </div>
+      <FooterComponent />
     </div>
   )
 }
 
 Layout.propTypes = {
   children: PropTypes.node,
-  path: PropTypes.string
+  path: PropTypes.string,
 }
 
 export default Layout
