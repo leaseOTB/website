@@ -18,7 +18,7 @@ const FooterComponent = () => {
           backgroundColor: theme.palette.secondary.white,
           color: theme.palette.secondary.main,
           width: "100%",
-          height: "30vh",
+          minHeight: "30vh",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
@@ -115,6 +115,7 @@ const FooterComponent = () => {
             >
               <FormattedMessage id="socialText" />
             </Typography>
+            {/* SOCIAL MEDIA LINKS */}
             <Grid item xs={12} sm={3}>
               <IconButton
                 style={{ color: theme.palette.primary.main }}
