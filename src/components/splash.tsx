@@ -43,6 +43,7 @@ const Splash = () => {
             fontFamily: "Gilroy Ultra Light",
             fontWeight: "bolder",
             width: "100vw",
+            padding: "0em 1em 0em 1em",
           }}
         >
           <FormattedMessage id="homeTitle" />
@@ -51,6 +52,7 @@ const Splash = () => {
         <div
           style={{
             flexDirection: "row",
+            paddingBottom: "1em",
           }}
         >
           <IconButton
